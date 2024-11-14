@@ -13,78 +13,169 @@ class iat_general
     {
         global $wpdb;
         $this->conn = $wpdb;
-        if (is_multisite()) {
-            $get_blog_id = get_current_blog_id();
-            $this->wp_posts = $this->conn->prefix . $get_blog_id . '_posts';
-            $this->wp_postmeta = $this->conn->prefix . $get_blog_id . '_postmeta';
-        } else {
-            $this->wp_posts = $this->conn->prefix . 'posts';
-            $this->wp_postmeta = $this->conn->prefix . 'postmeta';
-        }
-        add_action('admin_menu', array($this, 'fn_iat_add_admin_menu_page'));
-        /* Remind me later */
-        add_action('wp_ajax_iat_remind_me_later', array($this, 'fn_iat_remind_me_later'));
-        /* Do not show again */
-        add_action('wp_ajax_iat_do_not_show_again', array($this, 'fn_iat_do_not_show_again'));
-        /* Admin Notice for Review */
-        add_action('admin_notices', array($this, 'iat_admin_notices'));
-        add_action( 'admin_enqueue_scripts', array($this,'iat_admin_scripts' ));
+        $this->wp_posts = $this->conn->prefix . 'posts';
+        $this->wp_postmeta = $this->conn->prefix . 'postmeta';
+        /* admin menu */
+        add_action('admin_menu', [$this, 'fn_iat_add_admin_menu_page']);
+        /* remove sub menu Page */
+        add_action('admin_head', [$this, 'fn_iat_remove_sub_menu_page']);
+        /* remind me later */
+        add_action('wp_ajax_iat_remind_me_later', [$this, 'fn_iat_remind_me_later']);
+        /* do not show again */
+        add_action('wp_ajax_iat_do_not_show_again', [$this, 'fn_iat_do_not_show_again']);
+        /* admin notice for Review */
+        add_action('admin_notices', [$this, 'iat_admin_notices']);
+        /* admin scripts */
+        add_action('admin_enqueue_scripts', [$this, 'iat_admin_scripts']);
     }
 
     public function fn_iat_add_admin_menu_page()
     {
-        /* add Image alt text menu page.  */
-        $image_alt_text_menu_page = add_menu_page(
-            esc_html(__('Image Alt Text', IMAGE_ALT_TEXT)),
-            esc_html(__('Image Alt Text', IMAGE_ALT_TEXT)),
-            'manage_options',
-            'image-alt-text',
-            array($this, 'fn_iat_image_alternative_text_handler'),
-            'dashicons-format-image',
-            4
+        $menus = [
+            'main' => [
+                'page_title' => __('Image Alt Text', IMAGE_ALT_TEXT),
+                'menu_title' => __('Image Alt Text', IMAGE_ALT_TEXT),
+                'capability' => 'manage_options',
+                'menu_slug'  => 'with-alt',
+                'function'   => [$this, 'fn_iat_image_alternative_text_handler'],
+                'icon_url'   => 'dashicons-format-image'
+            ],
+            'sub' => [
+                [
+                    'page_title' => __('With Alt', IMAGE_ALT_TEXT),
+                    'menu_title' => __('With Alt', IMAGE_ALT_TEXT),
+                    'menu_slug'  => 'with-alt',
+                    'function'   => [$this, 'fn_iat_with_alt_handler']
+                ],
+                [
+                    'page_title' => __('Without Alt', IMAGE_ALT_TEXT),
+                    'menu_title' => __('Without Alt', IMAGE_ALT_TEXT),
+                    'menu_slug'  => 'without-alt',
+                    'function'   => [$this, 'fn_iat_without_alt_handler']
+                ],
+                [
+                    'page_title' => __('Pro Coming Soon', IMAGE_ALT_TEXT),
+                    'menu_title' => __('Pro Coming Soon', IMAGE_ALT_TEXT),
+                    'menu_slug'  => 'pro-coming-soon',
+                    'function'   => [$this, 'fn_iat_pro_alt_handler']
+                ],
+            ]
+        ];
+
+        $image_alt_text = add_menu_page(
+            $menus['main']['page_title'],
+            $menus['main']['menu_title'],
+            $menus['main']['capability'],
+            $menus['main']['menu_slug'],
+            $menus['main']['function'],
+            $menus['main']['icon_url'],
+			11
         );
+        $this->fn_iat_admin_assets($image_alt_text);
 
-        /* css. */
-        add_action('admin_print_styles-' . $image_alt_text_menu_page, array($this, 'fn_iat_image_alternative_text_css'));
-
-        /* js. */
-        add_action('admin_print_scripts-' . $image_alt_text_menu_page, array($this, 'fn_iat_image_alternative_text_js'));
+        foreach ($menus['sub'] as $submenu) {
+            $hook_suffix = add_submenu_page(
+                'with-alt',
+                $submenu['page_title'],
+                $submenu['menu_title'],
+                'manage_options',
+                $submenu['menu_slug'],
+                $submenu['function']
+            );
+            $this->fn_iat_admin_assets($hook_suffix);
+        }
     }
 
-    public function fn_iat_image_alternative_text_css()
+
+    public function fn_iat_remove_sub_menu_page()
     {
-        /* register. */
-        wp_register_style('iat-bootstrap-css', plugins_url('/assets/css/bootstrap.min.css', dirname(__FILE__)), false, IAT_FILE_VERSION, 'all');
-        wp_register_style('iat-datatable-css', plugins_url('/assets/css/datatable.min.css', dirname(__FILE__)), false, IAT_FILE_VERSION, 'all');
-        wp_register_style('iat-admin-css', plugins_url('/assets/css/iat-admin.css', dirname(__FILE__)), false, IAT_FILE_VERSION, 'all');
-
-        /* enqueue. */
-        wp_enqueue_style('iat-bootstrap-css');
-        wp_enqueue_style('iat-datatable-css');
-        wp_enqueue_style('iat-admin-css');
+        remove_submenu_page('with-alt', 'with-alt');
+        remove_submenu_page('with-alt', 'without-alt');
+        remove_submenu_page('with-alt', 'pro-coming-soon');
     }
 
-    public function fn_iat_image_alternative_text_js()
+    public function fn_iat_admin_assets($hook_suffix)
     {
-        /* register. */
-        wp_register_script('iat-bootstrap-js', plugins_url('/assets/js/bootstrap.min.js', dirname(__FILE__)), array('jquery'), IAT_FILE_VERSION, true);
-        wp_register_script('iat-datatable-js', plugins_url('/assets/js/datatable.min.js', dirname(__FILE__)), array('jquery'), IAT_FILE_VERSION, true);
-        wp_register_script('iat-admin-js', plugins_url('/assets/js/iat-admin.js', dirname(__FILE__)), array('jquery'), IAT_FILE_VERSION, true);
-
-        /* enqueue. */
-        wp_enqueue_script('iat-bootstrap-js');
-        wp_enqueue_script('iat-datatable-js');
-        wp_enqueue_script('iat-admin-js');
-
-        /* localize script for wat-admin-js */
-        wp_localize_script('iat-admin-js', 'iat_obj', array('ajaxurl' => admin_url('admin-ajax.php'), 'admin_url' => admin_url()));
+        add_action('admin_print_styles-' . $hook_suffix, array($this, 'fn_iat_css'));
+        add_action('admin_print_scripts-' . $hook_suffix, array($this, 'fn_iat_js'));
     }
+
+    public function fn_iat_css()
+    {
+        $styles = [
+            'iat-bootstrap-css' => '/assets/css/bootstrap.min.css',
+            'iat-datatable-css' => '/assets/css/datatable.min.css',
+            'iat-toastr-css' => '/assets/css/toastr.min.css',
+            'iat-admin-css' => '/assets/css/iat-admin.css',
+        ];
+
+        foreach ($styles as $handle => $path) {
+            wp_register_style($handle, plugins_url($path, dirname(__FILE__)), false, IAT_FILE_VERSION, 'all');
+            wp_enqueue_style($handle);
+        }
+    }
+
+    public function fn_iat_js()
+    {
+        $scripts = [
+            'iat-bootstrap-js' => '/assets/js/bootstrap.min.js',
+            'iat-bootstrap-bundle-js' => '/assets/js/bootstrap.bundle.min.js',
+            'iat-datatable-js' => '/assets/js/datatable.min.js',
+            'iat-toastr-js' => '/assets/js/toastr.min.js',
+            'iat-admin-js' => '/assets/js/iat-admin.js',
+        ];
+
+        foreach ($scripts as $handle => $path) {
+            wp_register_script($handle, plugins_url($path, dirname(__FILE__)), ['jquery'], IAT_FILE_VERSION, true);
+            wp_enqueue_script($handle);
+        }
+
+        /* localize script for iat-admin-js */
+        wp_localize_script('iat-admin-js', 'iatObj', [
+            'ajaxUrl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('iat_image_alt_text'),
+            'msg1' => esc_html(__('Are you sure you want to copy the alt text? If "With Alt" is selected, this action will update existing alt text with the post name. If "Without Alt" is selected, it will fill all missing alt text for media items using the corresponding post name.', IMAGE_ALT_TEXT)),
+            'msg2' => esc_html(__('Are you sure you want to copy the alt text? If "With Alt" is selected, this action will update attached post name to alt text . If "Without Alt" is selected, it will fill all missing alt text for media items using the corresponding attached post name.', IMAGE_ALT_TEXT)),
+            'msg3' => esc_html(__('Great, All your images have alt text, Any images without alt text will appear here.', IMAGE_ALT_TEXT))
+        ]);
+    }
+
 
     public function fn_iat_image_alternative_text_handler()
     {
-        /* add Image alt text view  */
-        if (file_exists(IAT_FILE_PATH . '/admin/iat-missing-alt-txt-media-list.php')) {
-            include_once(IAT_FILE_PATH . '/admin/iat-missing-alt-txt-media-list.php');
+        /* Image Alt Text view (default: With Alt) */
+        $file_path = IAT_FILE_PATH . '/view/iat-admin-view-header.php';
+        if (file_exists($file_path)) {
+            include_once $file_path;
+        }
+    }
+
+    public function fn_iat_with_alt_handler()
+    {
+
+        /* With Alt view  */
+        $file_path = IAT_FILE_PATH . '/view/iat-admin-view-with-alt.php';
+        if (file_exists($file_path)) {
+            include_once $file_path;
+        }
+    }
+
+    public function fn_iat_without_alt_handler()
+    {
+
+        /* Withot Alt view  */
+        $file_path = IAT_FILE_PATH . '/view/iat-admin-view-without-alt.php';
+        if (file_exists($file_path)) {
+            include_once $file_path;
+        }
+    }
+
+    public function fn_iat_pro_alt_handler()
+    {
+        /* Pro Coming Soon view  */
+        $file_path = IAT_FILE_PATH . '/view/iat-admin-view-pro-coming-soon.php';
+        if (file_exists($file_path)) {
+            include_once $file_path;
         }
     }
 
@@ -176,16 +267,16 @@ class iat_general
                         </button>
                     </p>
                 </div>
-        <?php }
+<?php }
         }
     }
 
-    function iat_admin_scripts( $hook ) {        
+    function iat_admin_scripts($hook)
+    {
 
-        wp_enqueue_script( 'iat-admin-global', plugins_url('/assets/js/iat-global.js', dirname(__FILE__)), array('jquery'), IAT_FILE_VERSION, true);
-        
+        wp_enqueue_script('iat-admin-global', plugins_url('/assets/js/iat-global.js', dirname(__FILE__)), array('jquery'), IAT_FILE_VERSION, true);
+        wp_enqueue_script('jquery-ui-tooltip');
     }
-    
 }
 
-$iat_general = new iat_general();
+new iat_general();

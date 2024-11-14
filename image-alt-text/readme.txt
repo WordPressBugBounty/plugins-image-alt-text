@@ -6,8 +6,8 @@ Contributors: rswebstudios, lakharadk, pruthak911
 Tags: image alt text, image alternative text, image alternative, image alt, alt text
 Requires at least: 5.3
 Requires PHP: 7.4
-Tested up to: 6.6
-Stable tag: 2.0.0
+Tested up to: 6.7
+Stable tag: 3.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,7 +42,23 @@ We would always love to hear from you about plugin issue, queries and enhancemen
 
 7. **Plugin is available for multisite also.**
 
+== Pro Coming Soon == 
 
+1. Prefix and Postfix to Image Alt Text.
+
+2. Detect images without Alt Text on webpages.
+
+3. Notify Images without Alt Text Reminder.
+
+4. List of Images that are not following SEO Standards.
+
+5. List the Images with Duplicate Names.
+
+6. List the Images with Duplicate Alt Tags.
+
+7. List the Duplicate Image File Names.
+
+8. Detect Missing Aria label on webpages.
 
 
 == Installation ==
@@ -90,6 +106,11 @@ Please reach out via the official support forum on WordPress.org.
 * MySQL 5.6 or greater is recommended
 
 == Changelog ==
+
+= 3.0.0 =
+* Improvement - Layout to provide a more intuitive and user-friendly interface.
+* Implementation - Introduced functionality for easily adding alt text by associated page/post + Image title through both row actions and bulk actions.
+* Implementation - Performance enhancements to reduce load times and improve overall system responsiveness.
 
 = 2.0.0 =
 * Implementation - Available for multisite installed
