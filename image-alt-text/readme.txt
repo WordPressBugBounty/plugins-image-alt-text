@@ -6,7 +6,7 @@ Contributors: rswebstudios, lakharadk, pruthak911
 Tags: image alt text, image alternative text, image alternative, image alt, alt text
 Requires at least: 5.3
 Requires PHP: 7.4
-Tested up to: 6.7
+Tested up to: 6.8
 Stable tag: 3.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
