@@ -6,8 +6,8 @@ Contributors: rswebstudios, lakharadk, pruthak911
 Tags: image alt text, image alternative text, image alternative, image alt, alt text
 Requires at least: 5.3
 Requires PHP: 7.4
-Tested up to: 6.8
-Stable tag: 3.0.0
+Tested up to: 6.9
+Stable tag: 4.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,23 +42,23 @@ We would always love to hear from you about plugin issue, queries and enhancemen
 
 7. **Plugin is available for multisite also.**
 
-== Pro Coming Soon == 
+== Pro Features ==
 
-1. Prefix and Postfix to Image Alt Text.
+Buy Pro **[Image Alt Text](https://imagealttext.in/pricing/)**
 
-2. Detect images without Alt Text on webpages.
+1. **AI-Powered Alt Text Generation** — Auto-generate alt text on image upload using Local AI (smart metadata + EXIF analysis, no API key needed), OpenAI GPT-4o Vision, Post Title, or File Name.
 
-3. Notify Images without Alt Text Reminder.
+2. **OpenAI / ChatGPT Integration** — Connect your OpenAI API key and use a custom prompt to generate contextual, SEO-friendly alt text automatically.
 
-4. List of Images that are not following SEO Standards.
+3. **SEO Status Column** — Every image is rated Excellent, Good, or Poor based on alt text quality, directly in the image list.
 
-5. List the Images with Duplicate Names.
+4. **Highlight Missing Alt Text on Frontend** — Visually outline images without alt text on your live site with a configurable highlight colour to quickly spot accessibility gaps.
 
-6. List the Images with Duplicate Alt Tags.
+5. **Date Range Filters** — Filter the image list by Today, Last 7 Days, Last 30 Days, Last 6 Months, Last 12 Months, Last 3 Years, or a custom date range.
 
-7. List the Duplicate Image File Names.
+6. **Auto Add Alt Text on Upload** — Automatically populate alt text the moment an image is uploaded, using your preferred generation method.
 
-8. Detect Missing Aria label on webpages.
+7. **Settings Page** — Central settings panel for AI configuration, highlight options, and upload automation preferences.
 
 
 == Installation ==
@@ -96,8 +96,10 @@ Please reach out via the official support forum on WordPress.org.
 
 == Screenshots ==
 
-1. Images with Alternative Text
-2. Images without Alternative Text 
+1. Version 3.0.0 - Images with Alternative Text
+2. Version 3.0.0 - Images without Alternative Text
+3. Version 4.0.0 - Images with Alt Text — redesigned smart inline editor with Copy Title to Alt, Copy Filename to Alt, Save/Reset buttons, Size column and Bulk Actions
+4. Version 4.0.0 - Images without Alt Text — redesigned layout with bulk checkbox selection, inline alt text editor and improved action buttons
 
 
 = Minimum Requirements =
@@ -106,6 +108,23 @@ Please reach out via the official support forum on WordPress.org.
 * MySQL 5.6 or greater is recommended
 
 == Changelog ==
+
+= 4.0.0 =
+* Improvement - Completely redesigned admin UI with a cleaner, more modern layout and updated plugin branding.
+* Implementation - Smart inline alt text editor with integrated Save and Reset buttons — no page refresh needed.
+* Implementation - "Copy Title to Alt" row action button added directly inside the Title column for one-click alt text population.
+* Implementation - "Copy Filename to Alt" row action button added inside the URL column to use the image filename as alt text.
+* Implementation - Bulk Actions dropdown allowing Copy Title or Copy Filename to alt text across multiple selected images at once.
+* Implementation - Bulk checkbox selection column added for selecting individual or all images on the current page.
+* Implementation - File size column added to the image list for quick reference.
+* Improvement - Date column now displays a human-readable relative time (e.g. "5 months ago") alongside the formatted date.
+* Improvement - Action buttons redesigned as icon buttons (Edit and View) replacing the previous text-based Update button.
+* Improvement - "Attached To" column removed for a more focused and less cluttered table layout.
+* Improvement - Tabs renamed from "With Alt" / "Without Alt" to "With Alt Text" / "Without Alt Text" for clarity.
+* Security - SQL queries in uninstall routine updated to use prepared statements.
+* Security - Removed server filesystem path exposure from JavaScript localization data.
+* Security - Replaced deprecated extract() with explicit variable assignment in view rendering.
+* Security - Consistent input sanitization and output escaping applied throughout all AJAX handlers and HTML output.
 
 = 3.0.0 =
 * Improvement - Layout to provide a more intuitive and user-friendly interface.

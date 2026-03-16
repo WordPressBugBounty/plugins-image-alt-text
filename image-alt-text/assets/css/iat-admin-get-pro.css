@@ -1,0 +1,1019 @@
+/* Get Pro Page Styles */
+.iat-get-pro-wrapper {
+    background: #f8f9fa;
+    margin: -20px -20px 0 -10px;
+    padding: 0;
+}
+
+/* Hero Section */
+.iat-pro-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.iat-pro-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.iat-pro-hero-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.iat-pro-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.iat-pro-hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.iat-pro-tagline {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.iat-pro-hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.iat-btn-primary, .iat-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.iat-btn-large {
+    font-size: 15px;
+    padding: 14px 28px;
+}
+
+.iat-btn-primary {
+    background: #ffffff;
+    color: #764ba2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.iat-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #764ba2;
+}
+
+.iat-btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.iat-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* Floating Cards */
+.iat-pro-hero-image {
+    flex: 0 0 240px;
+    position: relative;
+    height: 240px;
+}
+
+.iat-floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #764ba2;
+    animation: float 3s ease-in-out infinite;
+}
+
+.iat-floating-card .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.iat-card-1 {
+    top: 20px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.iat-card-2 {
+    top: 100px;
+    right: 10px;
+    animation-delay: 1s;
+}
+
+.iat-card-3 {
+    bottom: 40px;
+    left: 60px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Features Section */
+.iat-features-section {
+    padding: 50px 40px;
+    background: #ffffff;
+}
+
+.iat-section-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.iat-section-subtitle {
+    font-size: 15px;
+    text-align: center;
+    color: #6c757d;
+    margin: 0 0 35px 0;
+}
+
+.iat-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.iat-feature-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.iat-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.iat-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.iat-feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.iat-feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.iat-feature-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+}
+
+.iat-feature-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #2c3e50;
+}
+
+.iat-feature-card > p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c757d;
+    margin: 0 0 15px 0;
+}
+
+.iat-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.iat-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 13px;
+    color: #495057;
+}
+
+.iat-feature-list .dashicons {
+    color: #28a745;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Comparison Section */
+.iat-comparison-section {
+    padding: 50px 40px;
+    background: #f8f9fa;
+}
+
+.iat-comparison-table {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.iat-comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.iat-comparison-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+}
+
+.iat-comparison-table th {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.iat-comparison-table th:first-child {
+    text-align: left;
+}
+
+.iat-comparison-table .iat-pro-col {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.iat-comparison-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e9ecef;
+    text-align: center;
+    font-size: 13px;
+}
+
+.iat-comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.iat-comparison-table .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.iat-comparison-table .dashicons-yes {
+    color: #28a745;
+}
+
+.iat-comparison-table .dashicons-no-alt {
+    color: #dc3545;
+}
+
+.iat-comparison-table .iat-green {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.iat-comparison-table .iat-highlight-row {
+    background: #f0f8ff;
+}
+
+.iat-comparison-table .iat-highlight-row td:first-child {
+    color: #764ba2;
+}
+
+/* Pricing Section */
+.iat-pricing-section {
+    padding: 50px 40px;
+    background: #ffffff;
+}
+
+.iat-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 25px;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .iat-pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .iat-pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.iat-pricing-card {
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.iat-pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.iat-pricing-card.iat-popular {
+    border-color: #764ba2;
+    border-width: 3px;
+}
+
+.iat-pricing-card.iat-best-value {
+    border-color: #28a745;
+    border-width: 3px;
+}
+
+.iat-popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.iat-best-value-badge {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.iat-pricing-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+}
+
+.iat-price {
+    margin-bottom: 20px;
+}
+
+.iat-currency {
+    font-size: 20px;
+    font-weight: 600;
+    color: #764ba2;
+    vertical-align: top;
+}
+
+.iat-amount {
+    font-size: 44px;
+    font-weight: 700;
+    color: #764ba2;
+    line-height: 1;
+}
+
+.iat-period {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.iat-pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.iat-pricing-features li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 0;
+    font-size: 13px;
+    color: #495057;
+}
+
+.iat-pricing-features .dashicons {
+    color: #28a745;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.iat-btn-pricing {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.iat-btn-pricing:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+    color: #ffffff;
+}
+
+.iat-btn-popular {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.iat-money-back {
+    text-align: center;
+    font-size: 14px;
+    color: #28a745;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Testimonials Section - Slider */
+.iat-testimonials-section {
+    padding: 50px 40px;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.iat-slider-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.iat-testimonials-slider-wrapper {
+    overflow: hidden;
+    flex: 1;
+    padding: 15px 0 20px;
+}
+
+/* Prevent thin left-edge gap / clipped card border when sliding.
+   Add safe padding and GPU-friendly transform hints to avoid
+   subpixel rendering gaps and ensure cards render crisply. */
+.iat-testimonials-slider-wrapper {
+    box-sizing: border-box;
+    padding-left: 12px; /* small inset so leftmost card border isn't clipped */
+}
+
+.iat-testimonials-slider {
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    padding-right: 12px; /* prevent right-edge clipping when last card active */
+}
+
+.iat-testimonial {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.iat-testimonials-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.iat-testimonial {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e9ecef;
+    min-width: calc(33.333% - 14px);
+    max-width: calc(33.333% - 14px);
+    flex-shrink: 0;
+}
+
+.iat-testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.2);
+    border-color: #764ba2;
+}
+
+/* Slider Navigation Buttons */
+.iat-slider-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+    flex-shrink: 0;
+}
+
+.iat-slider-btn .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.iat-slider-btn:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+}
+
+.iat-slider-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: #ccc;
+}
+
+.iat-slider-btn:disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+/* Slider Dots */
+.iat-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.iat-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.iat-dot:hover {
+    background: #9ca3af;
+    transform: scale(1.1);
+}
+
+.iat-dot.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 36px;
+    border-radius: 6px;
+}
+
+/* View All Reviews Button */
+.iat-view-all-reviews {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.iat-btn-view-reviews {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+.iat-btn-view-reviews:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.iat-btn-view-reviews .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Testimonial Card Styles */
+
+.iat-testimonial:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(118, 75, 162, 0.25);
+    border-color: #764ba2;
+    z-index: 10;
+}
+
+.iat-testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.iat-testimonial-stars {
+    font-size: 14px;
+    line-height: 1;
+    color: #ffc107;
+}
+
+.iat-testimonial-rating-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #764ba2;
+    background: #f0e6ff;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.iat-testimonial-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    min-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+.iat-testimonial-content {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #495057;
+    font-style: italic;
+    margin: 0 0 15px 0;
+    flex-grow: 1;
+    min-height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+.iat-testimonial-footer {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #e9ecef;
+}
+
+.iat-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iat-author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(118, 75, 162, 0.2);
+}
+
+.iat-author-avatar .dashicons {
+    color: #ffffff;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+
+.iat-author-avatar .iat-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.iat-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.iat-author-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.iat-review-date {
+    font-size: 11px;
+    color: #6c757d;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* CTA Section */
+.iat-cta-section {
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-align: center;
+}
+
+.iat-cta-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.iat-cta-section > p {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    opacity: 0.95;
+}
+
+.iat-cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.iat-btn-cta-primary, .iat-btn-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.iat-btn-cta-primary {
+    background: #ffffff;
+    color: #764ba2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.iat-btn-cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    color: #764ba2;
+}
+
+.iat-btn-cta-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.iat-btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+.iat-guarantee {
+    font-size: 14px;
+    opacity: 0.95;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .iat-pro-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    .iat-pro-hero h1 {
+        font-size: 32px;
+    }
+
+    .iat-pro-hero-buttons {
+        justify-content: center;
+    }
+
+    .iat-features-section,
+    .iat-comparison-section,
+    .iat-pricing-section,
+    .iat-testimonials-section,
+    .iat-cta-section {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .iat-pro-hero {
+        padding: 30px 20px;
+    }
+
+    .iat-pro-hero h1 {
+        font-size: 26px;
+    }
+
+    .iat-pro-tagline {
+        font-size: 14px;
+    }
+
+    .iat-features-section,
+    .iat-comparison-section,
+    .iat-pricing-section,
+    .iat-testimonials-section,
+    .iat-cta-section {
+        padding: 30px 20px;
+    }
+
+    .iat-section-title {
+        font-size: 22px;
+    }
+
+    .iat-testimonials-section {
+        padding: 40px 20px;
+    }
+
+    .iat-slider-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .iat-slider-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .iat-slider-btn .dashicons {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .iat-testimonial {
+        min-width: calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+
+    .iat-features-grid {
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+    }
+
+    .iat-pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .iat-comparison-table {
+        overflow-x: auto;
+    }
+
+    .iat-cta-section h2 {
+        font-size: 26px;
+    }
+
+    .iat-cta-buttons {
+        flex-direction: column;
+    }
+
+    .iat-btn-cta-primary,
+    .iat-btn-cta-secondary {
+        width: 100%;
+    }
+
+    .iat-author-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .iat-author-avatar .dashicons {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .iat-testimonial {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .iat-slider-container {
+        gap: 10px;
+    }
+    
+    .iat-slider-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

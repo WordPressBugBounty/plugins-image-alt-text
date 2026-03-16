@@ -1,0 +1,1869 @@
+.select2-container .select2-selection--single .select2-selection__rendered {
+     font-size: 12px !important;
+ }
+
+ .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+     background-color: #764ba2 !important;
+ }
+
+ .select2-results__options li {
+     font-size: 12px !important;
+ }
+
+ /* ── Review Notice ───────────────────────────────────────────────────────── */
+
+.iat-review-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #f0f6fc;
+    border: 1px solid #b8d4f0;
+    border-left: 4px solid #667eea;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 0 20px 10px 0;
+    font-size: 13px;
+    color: #1d2327;
+    line-height: 1.5;
+}
+
+.iat-review-notice-icon {
+    font-size: 20px;
+    color: #f0b429;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.iat-review-notice p {
+    margin: 0 0 10px 0;
+    flex: 1;
+}
+
+.iat-review-notice-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.iat-review-btn {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.iat-review-btn-primary {
+    background: #667eea;
+    border-color: #667eea;
+    color: #fff !important;
+}
+
+.iat-review-btn-primary:hover {
+    background: #5a67d8;
+    border-color: #5a67d8;
+    color: #fff !important;
+}
+
+.iat-review-btn-secondary {
+    background: #fff;
+    border-color: #c3c4c7;
+    color: #2c3338;
+}
+
+.iat-review-btn-secondary:hover {
+    background: #f6f7f7;
+    border-color: #8c8f94;
+}
+
+.iat-review-btn-muted {
+    background: transparent;
+    border-color: transparent;
+    color: #787c82;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.iat-review-btn-muted:hover {
+    color: #2c3338;
+}
+
+@media (max-width: 782px) {
+    .iat-review-notice {
+        flex-direction: column;
+        gap: 8px;
+        margin-right: 10px;
+    }
+
+    .iat-review-notice-actions {
+        flex-direction: column;
+    }
+
+    .iat-review-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+/* ── End Review Notice ───────────────────────────────────────────────────── */
+
+.iat-action-container {
+     width: calc(100% - 20px);
+     margin: 0 20px 10px 0;
+     display: flex;
+     gap: 12px;
+ }
+
+ /* Compact Bootstrap-styled DataTables */
+
+ #iat-with-alt-text-datatable_wrapper .dt-input,
+ #iat-without-alt-text-datatable_wrapper .dt-input {
+     width: 80px;
+     padding: 4px 8px;
+     margin-right: 5px;
+     border-radius: 6px;
+ }
+
+
+ .iat-page-container {
+     margin: 0 20px 20px 0;
+     background: #fff;
+     box-shadow: 0 2px 8px rgba(118, 75, 162, 0.08);
+     border-radius: 8px;
+     font-size: 11px;
+     border: 1px solid #e5e7eb;
+     overflow: hidden;
+ }
+
+ .iat-page-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 12px 16px;
+     border-bottom: 1px solid #ddd6fe;
+     background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+     border-radius: 0;
+ }
+
+ .iat-page-title {
+     margin: 0;
+     font-size: 13px;
+     font-weight: 600;
+     color: #764ba2;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+
+ .iat-page-title i {
+     font-size: 14px;
+ }
+
+ /* Remove DataTable outer border for clean look */
+
+ div.dt-container .dt-search input {
+     border: 1px solid #aaa;
+     border-radius: 6px !important;
+     padding: 5px;
+     background-color: transparent;
+     color: inherit;
+     margin-left: 3px;
+     width: 130px !important;
+ }
+
+
+ .iat-datatable-container {
+     padding: 16px;
+     margin-bottom: 0;
+ }
+
+ .iat-datatable,
+ .iat-datatable th,
+ .iat-datatable td {
+     border: none !important;
+ }
+
+ /* Modern DataTable Styling */
+ .iat-datatable {
+     width: 100%;
+     border-collapse: separate;
+     border-spacing: 0;
+     font-size: 11px;
+     margin-bottom: 0;
+     background: #fff;
+ }
+
+ /* Modern table header styling */
+ .iat-datatable thead.table-light th {
+     padding: 10px 12px;
+     text-align: left;
+     font-weight: 600;
+     color: #764ba2;
+     background: #ddd6fe;
+     border-bottom: 2px solid #ddd6fe;
+     vertical-align: middle;
+     font-size: 12px;
+     white-space: nowrap;
+     transition: all 0.2s ease;
+ }
+
+
+ /* Compact spacing */
+ .iat-datatable.table-sm th,
+ .iat-datatable.table-sm td {
+     padding: 8px 10px;
+ }
+
+
+ /* Modern sorted column styling */
+ .iat-datatable thead th.sorting_asc,
+ .iat-datatable thead th.sorting_desc {
+     background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+     position: relative;
+     color: #5b21b6;
+ }
+
+ /* Modern sort indicators */
+ .iat-datatable thead th.sorting:after {
+     content: "⇅";
+     opacity: 0.4;
+     margin-left: 6px;
+     font-size: 11px;
+     color: #764ba2;
+ }
+
+ .iat-datatable thead th.sorting_asc:after {
+     content: "▲";
+     margin-left: 6px;
+     opacity: 1;
+     font-size: 9px;
+     color: #764ba2;
+ }
+
+ .iat-datatable thead th.sorting_desc:after {
+     content: "▼";
+     margin-left: 6px;
+     opacity: 1;
+     font-size: 9px;
+     color: #764ba2;
+ }
+
+ .iat-datatable tbody td {
+     padding: 10px 12px;
+     vertical-align: middle;
+     font-size: 11px;
+     text-align: center;
+     transition: all 0.2s ease;
+ }
+
+ /* Add 1px light-gray borders around cells to show row/column grid */
+ .iat-datatable thead th,
+ .iat-datatable tbody td {
+     border: 1px solid #e5e7eb !important;
+ }
+
+ .iat-datatable {
+     border-collapse: collapse;
+ }
+
+ /* Keep checkbox, title and URL columns left-aligned */
+ .iat-datatable tbody td:nth-child(3),
+ .iat-datatable tbody td:nth-child(4) {
+     text-align: left;
+ }
+
+ /* Constrain title and URL columns to prevent overflow */
+ .iat-datatable tbody td:nth-child(3) {
+     max-width: 180px;
+     word-break: break-word;
+     overflow-wrap: break-word;
+     white-space: normal;
+ }
+
+ .iat-datatable tbody td:nth-child(4) {
+     max-width: 220px;
+     word-break: break-all;
+     overflow-wrap: break-word;
+     white-space: normal;
+ }
+
+ /* Modern checkbox styling */
+ .form-check-input {
+     width: 16px;
+     height: 16px;
+     margin-top: 0;
+     vertical-align: middle;
+     background-color: #fff;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: contain;
+     border: 2px solid #ddd6fe;
+     appearance: none;
+     print-color-adjust: exact;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+ }
+
+ .form-check-input:hover {
+     border-color: #764ba2;
+ }
+
+ .form-check-input:checked {
+     background-color: #764ba2;
+     border-color: #764ba2;
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+ }
+
+ .form-check-input:focus {
+     border-color: #764ba2;
+     outline: 0;
+     box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.15);
+ }
+
+ /* Modern DataTables controls */
+ .dataTables_wrapper .dataTables_length,
+ .dataTables_wrapper .dataTables_filter {
+     padding: 0 0 12px 0;
+     font-size: 11px;
+ }
+
+ .dataTables_wrapper .dataTables_length label,
+ .dataTables_wrapper .dataTables_filter label {
+     font-size: 11px;
+     font-weight: 500;
+     color: #4b5563;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     margin: 0;
+ }
+
+ .dataTables_wrapper .dataTables_filter input {
+     padding: 6px 12px;
+     font-size: 11px;
+     border: 1px solid #ddd6fe;
+     border-radius: 6px;
+     margin-left: 8px;
+     background: #fafafa;
+     transition: all 0.2s ease;
+     width: 200px;
+ }
+
+ .dataTables_wrapper .dataTables_filter input:focus {
+     border-color: #764ba2;
+     outline: 0;
+     box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+     background: #fff;
+ }
+
+ .dataTables_wrapper .dataTables_length select {
+     padding: 6px 28px 6px 12px;
+     font-size: 11px;
+     border: 1px solid #ddd6fe;
+     border-radius: 6px;
+     background: #fafafa;
+     cursor: pointer;
+     transition: all 0.2s ease;
+     appearance: none;
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23764ba2' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+     background-repeat: no-repeat;
+     background-position: right 8px center;
+     background-size: 12px;
+     min-width: 70px;
+ }
+
+ .dataTables_wrapper .dataTables_length select:focus {
+     border-color: #764ba2;
+     outline: 0;
+     box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+     background-color: #fff;
+ }
+
+ .dataTables_wrapper .dataTables_info {
+     padding: 12px 0 0 0;
+     font-size: 11px;
+     color: #6b7280;
+     font-weight: 500;
+ }
+
+ .dataTables_wrapper .dataTables_paginate {
+     padding: 12px 0 0 0;
+ }
+
+ /* Modern pagination styling - Purple Theme */
+ .dataTables_wrapper .dataTables_paginate .paginate_button {
+     padding: 6px 12px !important;
+     margin-left: 4px !important;
+     border: 1px solid #e0e0e0 !important;
+     border-radius: 6px !important;
+     color: #764ba2 !important;
+     cursor: pointer !important;
+     background: #fff !important;
+     font-size: 11px !important;
+     font-weight: 600 !important;
+     transition: all 0.3s ease !important;
+     min-width: 36px !important;
+     text-align: center !important;
+     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+ }
+
+ /* Current/Active page - Purple with White Text */
+ .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+ .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+ .dataTables_wrapper .dataTables_paginate .paginate_button.current:focus {
+     background: #ddd6fe !important;
+     color: #764ba2 !important;
+     border-color: #ddd6fe !important;
+     box-shadow: 0 1px 4px rgba(118, 75, 162, 0.08) !important;
+     font-weight: 700 !important;
+     transform: translateY(-1px) !important;
+ }
+
+ /* Modern pagination hover - Light Purple Background */
+ .dataTables_wrapper .dataTables_paginate .paginate_button:hover:not(.current):not(.disabled) {
+     background: #f5f3ff !important;
+     border-color: #764ba2 !important;
+     color: #5b21b6 !important;
+     transform: translateY(-1px) !important;
+     box-shadow: 0 2px 6px rgba(118, 75, 162, 0.15) !important;
+ }
+
+ /* Modern pagination disabled - Greyed Out */
+ .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+ .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+ .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:focus {
+     color: #a0a0a0 !important;
+     cursor: not-allowed !important;
+     background: #f5f5f5 !important;
+     border-color: #e0e0e0 !important;
+     transform: none !important;
+     opacity: 0.6 !important;
+     box-shadow: none !important;
+ }
+
+ /* ============================================ */
+ /* NEWER DATATABLES VERSION (dt-container) - PURPLE THEME */
+ /* ============================================ */
+
+ /* Base pagination button styling */
+ div.dt-container .dt-paging .dt-paging-button {
+     padding: 6px 12px !important;
+     margin-left: 4px !important;
+     border: 1px solid #e0e0e0 !important;
+     border-radius: 6px !important;
+     color: #764ba2 !important;
+     cursor: pointer !important;
+     background: #fff !important;
+     font-size: 11px !important;
+     font-weight: 600 !important;
+     transition: all 0.3s ease !important;
+     min-width: 36px !important;
+     text-align: center !important;
+     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+ }
+
+ /* Current/Active page - Purple with White Text */
+ div.dt-container .dt-paging .dt-paging-button.current,
+ div.dt-container .dt-paging .dt-paging-button.current:hover,
+ div.dt-container .dt-paging .dt-paging-button.current:active {
+     color: #764ba2 !important; /* Corrected font color */
+     border: 1px solid #ddd6fe !important; /* Updated border color */
+     background: #ddd6fe !important; /* Updated background color */
+     background-color: #ddd6fe !important; /* Updated background color */
+     background-image: none !important;
+     box-shadow: 0 1px 4px rgba(118, 75, 162, 0.08) !important; /* Adjusted shadow */
+     font-weight: 700 !important;
+     transform: translateY(-1px) !important;
+ }
+
+ /* Hover state - Light Purple Background */
+ div.dt-container .dt-paging .dt-paging-button:hover:not(.current):not(.disabled) {
+     color: #5b21b6 !important;
+     border: 1px solid #764ba2 !important;
+     background: #f5f3ff !important;
+     background-color: #f5f3ff !important;
+     background-image: none !important;
+     transform: translateY(-1px) !important;
+     box-shadow: 0 2px 6px rgba(118, 75, 162, 0.15) !important;
+ }
+
+ /* Active/Click state */
+ div.dt-container .dt-paging .dt-paging-button:active:not(.current):not(.disabled) {
+     outline: none !important;
+     background: #ddd6fe !important;
+     background-color: #ddd6fe !important;
+     background-image: none !important;
+     box-shadow: inset 0 0 3px rgba(118, 75, 162, 0.3) !important;
+ }
+
+ /* Disabled state - Greyed Out */
+ div.dt-container .dt-paging .dt-paging-button.disabled,
+ div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+ div.dt-container .dt-paging .dt-paging-button.disabled:active {
+     cursor: default !important;
+     color: #a0a0a0 !important;
+     border: 1px solid #e0e0e0 !important;
+     background: #f5f5f5 !important;
+     background-color: #f5f5f5 !important;
+     background-image: none !important;
+     box-shadow: none !important;
+     opacity: 0.6 !important;
+     transform: none !important;
+ }
+
+ /* Ellipsis (...) */
+ div.dt-container .dt-paging .ellipsis {
+     padding: 0 1em !important;
+     color: #764ba2 !important;
+ }
+
+ /* Bootstrap form controls in page container */
+ .iat-page-container .form-control {
+     height: auto;
+     padding: 0.25rem 0.5rem;
+     font-size: 11px;
+     border: 1px solid #ced4da;
+     border-radius: 0.25rem;
+ }
+
+ .iat-page-container .form-control:focus {
+     border-color: #86b7fe;
+     outline: 0;
+     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+ }
+
+ /* Bootstrap buttons in page container */
+ .iat-page-container .btn {
+     padding: 0.25rem 0.5rem;
+     font-size: 11px;
+     border-radius: 0.25rem;
+     font-weight: 400;
+     text-align: center;
+     text-decoration: none;
+     vertical-align: middle;
+     cursor: pointer;
+     border: 1px solid transparent;
+     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+ }
+
+ /* Modern button variants */
+ .iat-page-container .btn-primary {
+     color: #fff;
+     background-color: #764ba2;
+     border-color: #764ba2;
+ }
+
+ .iat-page-container .btn-primary:hover {
+     background-color: #5b21b6;
+     border-color: #5b21b6;
+     transform: translateY(-1px);
+     box-shadow: 0 2px 4px rgba(118, 75, 162, 0.3);
+ }
+
+ .iat-page-container .btn-secondary {
+     color: #fff;
+     background-color: #6c757d;
+     border-color: #6c757d;
+ }
+
+ .iat-page-container .btn-secondary:hover {
+     background-color: #5c636a;
+     border-color: #565e64;
+ }
+
+ .iat-page-container .btn-sm {
+     padding: 0.125rem 0.375rem;
+     font-size: 10px;
+     border-radius: 0.2rem;
+ }
+
+ /* Modern action buttons */
+ .iat-action-btn,
+ .btn-outline-primary {
+     padding: 0.25rem 0.5rem;
+     background: #fff;
+     border: 1px solid #764ba2;
+     border-radius: 6px;
+     color: #764ba2;
+     cursor: pointer;
+     font-size: 10px;
+     text-decoration: none;
+     display: inline-block;
+     margin-right: 0.25rem;
+     line-height: 1.4;
+     font-weight: 400;
+     text-align: center;
+     vertical-align: middle;
+     transition: all 0.2s ease;
+ }
+
+ .iat-action-btn:hover,
+ .btn-outline-primary:hover {
+     background: #764ba2;
+     border-color: #764ba2;
+     color: #fff;
+     transform: translateY(-1px);
+     box-shadow: 0 2px 4px rgba(118, 75, 162, 0.3);
+ }
+
+ /* ============================================ */
+ /* DATATABLE DEFAULT LOADER - PURPLE THEME (#764ba2) */
+ /* ============================================ */
+
+ /* Default DataTable loader with purple dots */
+ div.dt-processing {
+     position: absolute !important;
+     top: 50% !important;
+     left: 50% !important;
+     width: 200px !important;
+     margin-left: -100px !important;
+     margin-top: -22px !important;
+     text-align: center !important;
+     padding: 2px !important;
+     z-index: 10 !important;
+ }
+
+ div.dt-processing>div:last-child {
+     position: relative !important;
+     width: 80px !important;
+     height: 15px !important;
+     margin: 1em auto !important;
+ }
+
+ div.dt-processing>div:last-child>div {
+     position: absolute !important;
+     top: 0 !important;
+     width: 13px !important;
+     height: 13px !important;
+     border-radius: 50% !important;
+     background: #222222 !important;
+     animation-timing-function: cubic-bezier(0, 1, 1, 0) !important;
+ }
+
+ div.dt-processing>div:last-child>div:nth-child(1) {
+     left: 8px !important;
+     animation: datatables-loader-1 .6s infinite !important;
+ }
+
+ div.dt-processing>div:last-child>div:nth-child(2) {
+     left: 8px !important;
+     animation: datatables-loader-2 .6s infinite !important;
+ }
+
+ div.dt-processing>div:last-child>div:nth-child(3) {
+     left: 32px !important;
+     animation: datatables-loader-2 .6s infinite !important;
+ }
+
+ div.dt-processing>div:last-child>div:nth-child(4) {
+     left: 56px !important;
+     animation: datatables-loader-3 .6s infinite !important;
+ }
+
+ @keyframes datatables-loader-1 {
+     0% {
+         transform: scale(0);
+     }
+
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ @keyframes datatables-loader-3 {
+     0% {
+         transform: scale(1);
+     }
+
+     100% {
+         transform: scale(0);
+     }
+ }
+
+ @keyframes datatables-loader-2 {
+     0% {
+         transform: translate(0, 0);
+     }
+
+     100% {
+         transform: translate(24px, 0);
+     }
+ }
+
+ /* Bootstrap responsive utilities */
+ @media screen and (max-width: 768px) {
+     .iat-datatable {
+         font-size: 10px;
+     }
+
+     .dataTables_wrapper .dataTables_length,
+     .dataTables_wrapper .dataTables_filter,
+     .dataTables_wrapper .dataTables_info,
+     .dataTables_wrapper .dataTables_paginate {
+         float: none;
+         text-align: left;
+         display: block;
+         margin: 0.25rem 0;
+         padding: 0.25rem 0.5rem;
+     }
+
+     .iat-datatable.table-sm th,
+     .iat-datatable.table-sm td {
+         padding: 0.25rem 0.125rem;
+     }
+ }
+
+ /* Modern checkbox styles - Theme Color Purple */
+ .iat-bulk-checkbox {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .iat-bulk-checkbox .form-check-input,
+ .iat-bulk-checkbox input[type="checkbox"] {
+     position: relative;
+     cursor: pointer;
+     width: 18px;
+     height: 18px;
+     margin: 0;
+     vertical-align: middle;
+     background-color: #fff;
+     border: 2px solid #764ba2;
+     border-radius: 4px;
+     transition: all 0.2s ease;
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+ }
+
+ .iat-bulk-checkbox .form-check-input:hover,
+ .iat-bulk-checkbox input[type="checkbox"]:hover {
+     border-color: #5b21b6;
+     box-shadow: 0 0 0 2px rgba(118, 75, 162, 0.1);
+ }
+
+ .iat-bulk-checkbox .form-check-input:checked,
+ .iat-bulk-checkbox input[type="checkbox"]:checked {
+     background-color: #764ba2;
+     border-color: #764ba2;
+     animation: checkBounce 0.3s ease;
+ }
+
+ .iat-bulk-checkbox .form-check-input:checked::before,
+ .iat-bulk-checkbox input[type="checkbox"]:checked::before {
+     content: "✓";
+     position: absolute;
+     top: 48%;
+     left: 50%;
+     transform: translate(-31%, -42%);
+     color: #fff;
+     font-size: 12px;
+     font-weight: bold;
+     line-height: 1;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ @keyframes checkBounce {
+     0% {
+         transform: scale(1);
+     }
+
+     50% {
+         transform: scale(1.15);
+     }
+
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ /* Select All Checkbox in Table Header - Theme Color Purple */
+ #iat-select-all.iat-bulk-select,
+ .iat-datatable thead input[type="checkbox"].iat-bulk-select {
+     position: relative;
+     cursor: pointer;
+     width: 18px;
+     height: 18px;
+     margin: 0;
+     vertical-align: middle;
+     background-color: #fff;
+     border: 2px solid #764ba2;
+     border-radius: 4px;
+     transition: all 0.2s ease;
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+ }
+
+ #iat-select-all.iat-bulk-select:hover,
+ .iat-datatable thead input[type="checkbox"].iat-bulk-select:hover {
+     border-color: #5b21b6;
+     box-shadow: 0 0 0 2px rgba(118, 75, 162, 0.1);
+ }
+
+ #iat-select-all.iat-bulk-select:checked,
+ .iat-datatable thead input[type="checkbox"].iat-bulk-select:checked {
+     background-color: #764ba2;
+     border-color: #764ba2;
+     animation: checkBounce 0.3s ease;
+ }
+
+ #iat-select-all.iat-bulk-select:checked::before,
+ .iat-datatable thead input[type="checkbox"].iat-bulk-select:checked::before {
+     content: "✓";
+     position: absolute;
+     top: 48%;
+     left: 50%;
+     transform: translate(-36%, -36%);
+     color: #fff;
+     font-size: 12px;
+     font-weight: bold;
+     line-height: 1;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ /* Force DataTables column widths */
+ .iat-datatable th:nth-child(1),
+ .iat-datatable td:nth-child(1) {
+     width: 35px !important;
+     max-width: 35px !important;
+     min-width: 35px !important;
+ }
+
+ .iat-datatable th:nth-child(2),
+ .iat-datatable td:nth-child(2) {
+     width: 95px !important;
+     max-width: 95px !important;
+     min-width: 95px !important;
+     text-align: center !important;
+     padding: 8px 4px !important;
+ }
+
+ /* Modern image styles - Bigger and Clickable */
+ .iat-image {
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     position: relative;
+ }
+
+ .iat-image a {
+     display: block;
+     position: relative;
+     border-radius: 8px;
+     overflow: hidden;
+ }
+
+ .iat-image .img-thumbnail {
+     width: 60px;
+     height: 60px;
+     object-fit: cover;
+     border-radius: 8px;
+     border: none;
+     transition: all 0.3s ease;
+     cursor: pointer;
+     padding: 0;
+     background: transparent;
+     display: block;
+ }
+
+ .iat-image a:hover .img-thumbnail {
+     transform: scale(1.05);
+     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+ }
+
+ .iat-image a::after {
+     content: "🔍";
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     opacity: 0;
+     font-size: 24px;
+     transition: opacity 0.3s ease;
+     pointer-events: none;
+ }
+
+ .iat-image a:hover::after {
+     opacity: 0.9;
+ }
+
+ /* Title Column - Clean and Organized */
+ .iat-title {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+ }
+
+ .iat-title-text {
+     font-size: 12px;
+     margin-bottom: 0;
+     color: #1e293b;
+     line-height: 1.5;
+     word-break: break-word;
+     max-width: 220px;
+     font-weight: 500;
+ }
+
+ .iat-copy-title-action {
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+     align-items: flex-start;
+ }
+
+ /* URL Column - Clean and Organized */
+ .iat-url {
+     position: relative;
+     font-size: 11px;
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+ }
+
+ .iat-copy-url {
+     display: block;
+     color: #64748b;
+     text-decoration: none;
+     word-break: break-all;
+     padding: 4px 8px;
+     border-radius: 4px;
+     border: 1px solid transparent;
+     transition: all 0.2s;
+     font-size: 12px;
+     line-height: 1.4;
+ }
+
+ .iat-copy-url:hover {
+     background: #f5f3ff;
+     color: #764ba2;
+     border-color: #ddd6fe;
+ }
+
+ .iat-url-copied {
+     display: none;
+     position: absolute;
+     top: -28px;
+     left: 0;
+     background: #d1fae5;
+     color: #059669;
+     padding: 4px 10px;
+     border-radius: 6px;
+     font-size: 12px;
+     border: 1px solid #6ee7b7;
+     z-index: 10;
+     font-weight: 600;
+     box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2);
+ }
+
+ .iat-copy-url-action {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+     align-items: flex-start;
+ }
+
+
+
+ /* Size styles */
+ .iat-size {
+     font-size: 12px;
+     color: #646970;
+     padding: 3px 0;
+ }
+
+ .iat-size span {
+     display: inline-block;
+     padding: 2px 6px;
+     background: #f0f0f1;
+     border-radius: 3px;
+     border: 1px solid #dcdcde;
+ }
+
+ /* Alt text styles */
+ .iat-alt-text {
+     position: relative;
+     min-width: 160px;
+ }
+
+ .iat-alt-text-display {
+     font-size: 12px;
+     line-height: 1.4;
+     padding: 4px 6px;
+     border-radius: 3px;
+     border: 1px solid transparent;
+     color: #2c3338;
+     background: #f6f7f7;
+     border-color: #dcdcde;
+     transition: all 0.15s;
+     cursor: pointer;
+     min-height: 20px;
+     overflow-wrap: break-word;
+     max-width: 180px;
+ }
+
+ .iat-alt-text-display:hover {
+     background: #f5f3ff;
+     border-color: #764ba2;
+ }
+
+ .iat-alt-text-display em {
+     color: #8c8f94;
+     font-style: italic;
+ }
+
+ .iat-alt-text-edit {
+     margin-top: 6px;
+ }
+
+ .iat-alt-text-input {
+     width: 100%;
+     padding: 6px 8px;
+     border: 1px solid #8c8f94;
+     border-radius: 4px;
+     font-size: 13px;
+     margin-bottom: 6px;
+     box-shadow: 0 0 0 transparent;
+ }
+
+ .iat-alt-text-input:focus {
+     border-color: #764ba2;
+     box-shadow: 0 0 0 1px #764ba2;
+     outline: none;
+ }
+
+ .iat-alt-text-actions {
+     display: flex;
+     gap: 6px;
+ }
+
+ .iat-alt-save,
+ .iat-alt-ai {
+     padding: 4px 10px;
+     background: #f6f7f7;
+     border: 1px solid #764ba2;
+     border-radius: 6px;
+     color: #764ba2;
+     font-size: 12px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+     flex: 1;
+     text-align: center;
+ }
+
+ .iat-alt-save:hover,
+ .iat-alt-ai:hover {
+     background: #f5f3ff;
+     border-color: #5b21b6;
+     color: #5b21b6;
+ }
+
+ .iat-alt-save {
+     background: #764ba2;
+     color: white;
+ }
+
+ .iat-alt-save:hover {
+     background: #5b21b6;
+     color: white;
+     transform: translateY(-1px);
+     box-shadow: 0 2px 4px rgba(118, 75, 162, 0.3);
+ }
+
+ /* Date Column - Clean Display */
+ .iat-date {
+     font-size: 13px;
+     color: #334155;
+     line-height: 1.5;
+     display: flex;
+     flex-direction: column;
+     gap: 2px;
+ }
+
+ .iat-date>span {
+     font-weight: 500;
+     color: #1e293b;
+ }
+
+ .iat-date-ago {
+     font-size: 13px;
+     color: #64748b;
+     font-style: italic;
+ }
+
+ /* Action Column - Clean Default Button Style */
+ .iat-action {
+     text-align: center;
+ }
+
+ .iat-action-buttons {
+     display: flex;
+     gap: 6px;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .iat-row-btn,
+ .iat-edit-btn,
+ .iat-view-btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     padding: 6px 10px;
+     min-width: 28px;
+     height: 28px;
+     border-radius: 6px;
+     text-decoration: none;
+     transition: all 0.2s ease;
+     border: 1px solid #764ba2;
+     background: #ddd6fe;
+     color: #764ba2;
+     font-size: 13px;
+     font-weight: 500;
+     cursor: pointer;
+     line-height: 1;
+ }
+
+ .iat-row-btn:hover,
+ .iat-edit-btn:hover,
+ .iat-view-btn:hover {
+     background: #764ba2;
+     border-color: #764ba2;
+     color: #fff;
+     transform: translateY(-1px);
+     box-shadow: 0 2px 6px rgba(118, 75, 162, 0.25);
+ }
+
+ .iat-row-btn i,
+ .iat-edit-btn i,
+ .iat-view-btn i {
+     font-size: 13px;
+     line-height: 1;
+ }
+
+ /* Smart Editor Styles - Clean and Integrated */
+ .iat-smart-alt-editor-wrapper {
+     margin: 4px 0;
+ }
+
+ .iat-input-container {
+     position: relative;
+     margin-bottom: 6px;
+ }
+
+ /* Beautiful Compact Input Field Design */
+ .iat-smart-alt-input {
+     width: 100%;
+     padding: 6px 10px;
+     border: 2px solid #e0e0e0;
+     border-radius: 6px;
+     font-size: 12px;
+     line-height: 1.4;
+     height: 28px;
+     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+     transition: all 0.3s ease;
+     margin-bottom: 6px;
+     background: #fff;
+     color: #2c3338;
+     font-weight: 500;
+ }
+
+ .iat-smart-alt-input::placeholder {
+     color: #8c8f94;
+     opacity: 0.7;
+     font-weight: 400;
+ }
+
+ .iat-smart-alt-input:focus {
+     border-color: #764ba2;
+     outline: none;
+     box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1), 0 1px 4px rgba(0, 0, 0, 0.08);
+     background: #fff;
+ }
+
+ .iat-input-container.has-changes .iat-smart-alt-input {
+     border-color: #f0b429;
+     background: #fffbf0;
+     box-shadow: 0 0 0 2px rgba(240, 180, 41, 0.1);
+ }
+
+ .iat-input-container.saving .iat-smart-alt-input {
+     border-color: #764ba2;
+     background: #f5f3ff;
+     box-shadow: 0 0 0 2px rgba(118, 75, 162, 0.15);
+ }
+
+ .iat-input-container.saved .iat-smart-alt-input {
+     border-color: #00a32a;
+     background: #f0fcf3;
+     box-shadow: 0 0 0 2px rgba(0, 163, 42, 0.1);
+ }
+
+ /* Action Buttons Container */
+ .iat-input-actions {
+     display: flex;
+     gap: 4px;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+
+ /* Base Button Styles - Compact */
+ .iat-save-btn,
+ .iat-reset-btn,
+ .iat-local-ai-generate-alt-btn,
+ .iat-openai-generate-btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 3px;
+     padding: 4px 8px;
+     border: 1.5px solid transparent;
+     border-radius: 6px;
+     font-size: 11px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.25s ease;
+     text-decoration: none;
+     outline: none;
+     position: relative;
+     white-space: nowrap;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+     height: 28px;
+     line-height: 1;
+ }
+
+ /* Small Button Variant - Extra Compact */
+ .iat-btn-small {
+     padding: 4px 8px !important;
+     font-size: 10px !important;
+     gap: 3px !important;
+     height: 28px !important;
+ }
+
+ .iat-btn-small .dashicons {
+     font-size: 14px;
+     width: 14px;
+     height: 14px;
+     line-height: 1;
+ }
+
+ .iat-btn-small .iat-btn-label {
+     font-size: 10px;
+     font-weight: 600;
+ }
+
+ /* Save Button - Purple Theme */
+ .iat-save-btn {
+     background: #764ba2;
+     color: white;
+     border-color: #764ba2;
+ }
+
+ .iat-save-btn:hover:not(:disabled) {
+     background: #5b21b6;
+     border-color: #5b21b6;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(118, 75, 162, 0.3);
+ }
+
+ .iat-save-btn:active:not(:disabled) {
+     transform: translateY(0);
+     box-shadow: 0 1px 2px rgba(118, 75, 162, 0.2);
+ }
+
+ .iat-save-btn:disabled {
+     background: #e0e0e0;
+     color: #8c8f94;
+     border-color: #e0e0e0;
+     cursor: not-allowed;
+     opacity: 0.6;
+     box-shadow: none;
+ }
+
+ /* Reset Button - Red Accent */
+ .iat-reset-btn {
+     background: #fff;
+     color: #dc3232;
+     border-color: #dc3232;
+ }
+
+ .iat-reset-btn:hover {
+     background: #dc3232;
+     color: white;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(220, 50, 50, 0.25);
+ }
+
+ .iat-reset-btn:active {
+     transform: translateY(0);
+     box-shadow: 0 1px 2px rgba(220, 50, 50, 0.15);
+ }
+
+ /* Local AI Button - Blue Gradient */
+ .iat-local-ai-generate-alt-btn {
+     background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+     color: #fff;
+     border-color: #2563eb;
+ }
+
+ .iat-local-ai-generate-alt-btn:hover,
+ .iat-local-ai-generate-alt-btn:focus {
+     background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+     border-color: #1e40af;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+     text-decoration: none;
+ }
+
+ .iat-local-ai-generate-alt-btn:active {
+     transform: translateY(0);
+     box-shadow: 0 1px 3px rgba(37, 99, 235, 0.2);
+ }
+
+ .iat-local-ai-generate-alt-btn.generating {
+     background: #8c8f94 !important;
+     border-color: #8c8f94 !important;
+     color: #fff !important;
+     cursor: not-allowed;
+     box-shadow: none;
+     opacity: 0.7;
+ }
+
+ /* OpenAI Button - Teal/Green Gradient */
+ .iat-openai-generate-btn {
+     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+     color: #fff;
+     border-color: #10b981;
+ }
+
+ .iat-openai-generate-btn:hover {
+     background: linear-gradient(135deg, #059669 0%, #047857 100%);
+     border-color: #059669;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+ }
+
+ .iat-openai-generate-btn:active {
+     transform: translateY(0);
+     box-shadow: 0 1px 3px rgba(16, 185, 129, 0.2);
+ }
+
+ .iat-openai-generate-btn.generating {
+     background: #8c8f94 !important;
+     border-color: #8c8f94 !important;
+     color: #fff !important;
+     cursor: not-allowed;
+     box-shadow: none;
+     opacity: 0.7;
+ }
+
+ /* Button Label */
+ .iat-btn-label {
+     font-weight: 600;
+     letter-spacing: 0.01em;
+ }
+
+ /* Status Messages Container - Compact */
+ .iat-status-line {
+     margin-top: 4px;
+     min-height: 24px;
+     position: relative;
+ }
+
+ /* Status Messages - Compact Design */
+ .iat-status-text {
+     font-size: 10px;
+     line-height: 1.4;
+     padding: 6px 8px;
+     border-radius: 6px;
+     display: none;
+     position: relative;
+     text-align: left;
+     border: 1.5px solid;
+     font-weight: 500;
+     animation: slideDown 0.25s ease;
+     min-height: 24px;
+     align-items: flex-start;
+     word-wrap: break-word;
+     word-break: break-word;
+     overflow-wrap: break-word;
+     white-space: normal;
+     max-width: 100%;
+ }
+
+ @keyframes slideDown {
+     from {
+         opacity: 0;
+         transform: translateY(-5px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .iat-status-text.success {
+     background: #ecfdf5;
+     color: #065f46;
+     border-color: #10b981;
+     display: flex;
+ }
+
+ .iat-status-text.success::before {
+     content: "✓ ";
+     font-weight: 700;
+     margin-right: 4px;
+     flex-shrink: 0;
+ }
+
+ .iat-status-text.error {
+     background: #fef2f2;
+     color: #991b1b;
+     border-color: #dc3232;
+     display: flex;
+ }
+
+ .iat-status-text.error::before {
+     content: "✕ ";
+     font-weight: 700;
+     margin-right: 4px;
+     flex-shrink: 0;
+ }
+
+ .iat-status-text.warning {
+     background: #fffbeb;
+     color: #92400e;
+     border-color: #f59e0b;
+     display: flex;
+ }
+
+ .iat-status-text.warning::before {
+     content: "⚠ ";
+     font-weight: 700;
+     margin-right: 4px;
+     flex-shrink: 0;
+ }
+
+ .iat-status-text.info {
+     background: #eff6ff;
+     color: #1e40af;
+     border-color: #3b82f6;
+     display: flex;
+ }
+
+ .iat-status-text.info::before {
+     content: "ℹ ";
+     font-weight: 700;
+     margin-right: 4px;
+     flex-shrink: 0;
+ }
+
+ .iat-row-btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     padding: 6px 14px;
+     font-size: 0.75rem;
+     font-weight: 500;
+     border-radius: 6px;
+     border: none;
+     cursor: pointer;
+     transition: all 0.2s;
+     text-decoration: none;
+     min-width: 40px;
+     white-space: nowrap;
+     height: 30px;
+ }
+
+ /* Animation for loading states */
+ @keyframes iat-spin {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ .dashicons-update {
+     animation: iat-spin 1s linear infinite;
+ }
+
+ /* Responsive design for smart editor */
+ @media screen and (max-width: 782px) {
+     .iat-input-actions {
+         flex-direction: column;
+         gap: 6px;
+     }
+
+     .iat-btn-small {
+         width: 100%;
+     }
+ }
+
+ /* ========================================
+    Date Range Filter - Compact Design
+    ======================================== */
+ .iat-date-filter-wrap {
+     width: calc(100% - 20px);
+     margin: 0 20px 12px 0;
+ }
+
+ .iat-date-filter-card {
+     background: #fff;
+     border: 1px solid #e5e7eb;
+     border-radius: 8px;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+ }
+
+ .iat-date-filter-header {
+     background: #ffffff;
+     padding: 8px 14px;
+     color: #764ba2;
+     font-size: 12px;
+     font-weight: 600;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     border-radius: 8px 8px 0 0;
+     border-bottom: 1px solid #e5e7eb;
+ }
+
+ .iat-date-filter-header i {
+     font-size: 13px;
+ }
+
+ .iat-date-filter-body {
+     padding: 12px 14px;
+     position: relative;
+     /* allow pseudo-element divider */
+ }
+
+ .iat-date-row {
+     display: flex;
+     gap: 10px;
+     align-items: flex-end;
+     margin-bottom: 10px;
+     flex-wrap: wrap;
+ }
+
+ .iat-date-col {
+     flex: 1;
+     min-width: 150px;
+ }
+
+ /* Make the date filter body split into two 50 50 columns when placed as a flex row
+   (covers cases where Bootstrap's .col-6 isn't available). Keep mobile stacking
+   via existing media queries. */
+ .iat-date-filter-body>.iat-date-row {
+     width: 50%;
+     box-sizing: border-box;
+     padding-right: 8px;
+ }
+
+ .iat-date-filter-body>.iat-quick-filters.col-6 {
+     width: 50%;
+     box-sizing: border-box;
+     padding-left: 8px;
+ }
+
+ /* Desktop: full-height vertical divider between left and right sections */
+ @media (min-width: 769px) {
+     .iat-date-filter-body::before {
+         content: "";
+         position: absolute;
+         top: 12px;
+         /* matches .iat-date-filter-body padding */
+         bottom: 12px;
+         left: 50%;
+         width: 2px;
+         background: #e5e7eb;
+         /* requested color */
+         transform: translateX(-50%);
+         pointer-events: none;
+     }
+ }
+
+ .iat-date-col label {
+     display: block;
+     font-size: 11px;
+     font-weight: 600;
+     color: #5b21b6;
+     margin-bottom: 4px;
+ }
+
+ .iat-date-input {
+     width: 100%;
+     padding: 6px 10px;
+     border: 2px solid #ddd6fe;
+     border-radius: 6px;
+     font-size: 12px;
+     color: #4b5563;
+     background: #fff;
+     height: 32px;
+     transition: all 0.2s ease;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ }
+
+ .iat-date-input:hover {
+     border-color: #c4b5fd;
+ }
+
+ .iat-date-input:focus {
+     outline: none;
+     border-color: #764ba2;
+     background: #fff;
+     box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+ }
+
+ /* Style the calendar icon */
+ .iat-date-input::-webkit-calendar-picker-indicator {
+     cursor: pointer;
+     border-radius: 4px;
+     padding: 4px;
+     filter: invert(32%) sepia(54%) saturate(1858%) hue-rotate(235deg) brightness(85%) contrast(90%);
+     transition: all 0.2s ease;
+ }
+
+ .iat-date-input::-webkit-calendar-picker-indicator:hover {
+     background: #f5f3ff;
+     filter: invert(22%) sepia(74%) saturate(2858%) hue-rotate(235deg) brightness(85%) contrast(90%);
+ }
+
+ /* Firefox date input styling */
+ .iat-date-input::-moz-focus-inner {
+     border: 0;
+ }
+
+ .iat-date-actions {
+     display: flex;
+     gap: 6px;
+     flex: 0 0 auto;
+ }
+
+ .iat-date-btn {
+     padding: 6px 12px;
+     border: none;
+     border-radius: 6px;
+     font-size: 11px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.2s;
+     white-space: nowrap;
+     height: 32px;
+     display: inline-flex;
+     align-items: center;
+     gap: 5px;
+ }
+
+ .iat-date-btn i {
+     font-size: 10px;
+ }
+
+ .iat-btn-apply {
+     background: #ddd6fe;
+     color: #764ba2;
+     border: 1px solid #764ba2;
+ }
+
+ .iat-btn-apply:hover {
+     background: #764ba2;
+     color: #fff;
+     border: 1px solid #764ba2;
+     transform: translateY(-1px);
+ }
+
+ .iat-btn-reset {
+     background: #f3f4f6;
+     color: #6b7280;
+     border: 1px solid #d1d5db;
+ }
+
+ .iat-btn-reset:hover {
+     background: #e5e7eb;
+     color: #374151;
+ }
+
+ .iat-quick-filters {
+     /*display: flex;*/
+     gap: 4px;
+     flex-wrap: wrap;
+     padding-top: 10px;
+     /*border-top: 1px solid #e5e7eb;*/
+     align-items: center;
+ }
+
+ .iat-quick-label {
+     font-size: 11px;
+     font-weight: 600;
+     color: #6b7280;
+     margin-right: 6px;
+     margin-bottom: 2px;
+     flex-shrink: 0;
+     width: 100%;
+     flex-basis: 100%;
+ }
+
+ .iat-quick-btn {
+     padding: 3px 7px;
+     background: #f5f3ff;
+     color: #764ba2;
+     border: 1px solid #ddd6fe;
+     border-radius: 4px;
+     font-size: 9px;
+     font-weight: 500;
+     cursor: pointer;
+     transition: all 0.2s;
+     white-space: nowrap;
+     flex: 0 0 auto;
+ }
+
+ .iat-quick-btn:hover {
+     background: #ede9fe;
+     border-color: #c4b5fd;
+ }
+
+ .iat-quick-btn.active {
+     background: #764ba2;
+     color: #fff;
+     border-color: #764ba2;
+ }
+
+ .iat-date-filter-card.has-filter .iat-date-filter-header {
+     background: #10b981;
+     color: #fff;
+ }
+
+ @media (max-width: 991px) {
+     .iat-date-filter-wrap {
+         width: calc(100% - 16px);
+         margin: 0 16px 12px 0;
+     }
+
+     .iat-date-col {
+         min-width: 130px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .iat-date-filter-wrap {
+         width: calc(100% - 15px);
+         margin: 0 15px 12px 0;
+     }
+
+     .iat-date-row {
+         flex-direction: column;
+     }
+
+     .iat-date-col {
+         width: 100%;
+         min-width: 100%;
+     }
+
+     .iat-date-actions {
+         width: 100%;
+         flex-direction: row;
+     }
+
+     .iat-date-btn {
+         flex: 1;
+         justify-content: center;
+     }
+
+     .iat-quick-filters {
+         gap: 3px;
+     }
+
+     .iat-quick-label {
+         margin-bottom: 4px;
+     }
+
+     .iat-quick-btn {
+         flex: 1 1 auto;
+         min-width: 0;
+         text-align: center;
+         font-size: 8px;
+         padding: 3px 4px;
+     }
+
+     .iat-save-btn,
+     .iat-reset-btn,
+     .iat-ai-generate-btn {
+         width: 100%;
+         justify-content: center;
+     }
+ }
+
+ /* Save button: light nav menu color, dark on hover */
+ .iat-input-actions .iat-save-btn {
+     background: #ddd6fe;
+     color: #5b21b6;
+     border: 1px solid #c4b5fd;
+     font-weight: 600;
+     border-radius: 4px;
+     box-shadow: none;
+     transition: background 0.15s, color 0.15s, border 0.15s;
+ }
+ .iat-input-actions .iat-save-btn:hover:not(:disabled) {
+     background: #5b21b6;
+     color: #fff;
+     border-color: #5b21b6;
+ }
+ .iat-input-actions .iat-save-btn:disabled {
+     background: #f3f4f6;
+     color: #b5b5b5;
+     border-color: #e5e7eb;
+     cursor: not-allowed;
+ }
+
+ /* Local AI: light blue, dark blue on hover */
+ .iat-input-actions .iat-local-ai-generate-alt-btn {
+     background: #e0f2fe;
+     color: #0369a1;
+     border: 1px solid #bae6fd;
+     font-weight: 600;
+     border-radius: 4px;
+     box-shadow: none;
+     transition: background 0.15s, color 0.15s, border 0.15s;
+ }
+ .iat-input-actions .iat-local-ai-generate-alt-btn:hover {
+     background: #0369a1;
+     color: #fff;
+     border-color: #0369a1;
+ }
+
+ /* OpenAI: light green, dark green on hover */
+ .iat-input-actions .iat-openai-generate-btn {
+     background: #d1fae5;
+     color: #047857;
+     border: 1px solid #6ee7b7;
+     font-weight: 600;
+     border-radius: 4px;
+     box-shadow: none;
+     transition: background 0.15s, color 0.15s, border 0.15s;
+ }
+ .iat-input-actions .iat-openai-generate-btn:hover {
+     background: #047857;
+     color: #fff;
+     border-color: #047857;
+ }

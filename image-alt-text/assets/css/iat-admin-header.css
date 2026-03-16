@@ -1,0 +1,448 @@
+/* --- HEADER/NAV: Perfect match to Pro version, iat prefix --- */
+.iat-header-container {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 10px 20px 10px 0;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.iat-header-inner {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 8px 12px;
+}
+
+.iat-brand-left {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.iat-brand-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.iat-brand-logo {
+    height: 44px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.iat-nav {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-left: 18px;
+    margin-left: 8px;
+    border-left: 1px solid #f3f3f3;
+}
+
+.iat-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.iat-nav-item {
+    margin: 0;
+}
+
+/* --- Free version header/nav styles (no docs/changelog/extra nav links) --- */
+.iat-header-container {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 10px 20px 10px 0;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.iat-header-inner {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 8px 12px;
+}
+
+.iat-brand-left {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.iat-brand-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.iat-brand-logo {
+    height: 100px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.iat-nav {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-left: 18px;
+    margin-left: 8px;
+    border-left: 1px solid #f3f3f3;
+}
+
+.iat-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.iat-nav-item {
+    margin: 0;
+}
+
+.iat-nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    /*border-radius: 6px;*/
+    transition: color .18s ease, background-color .18s ease, border-bottom-color .18s ease;
+    border: none;
+    border-bottom: 2.5px solid transparent;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.iat-nav-link:hover {
+    color: #5b21b6;
+    background-color: rgba(91, 33, 182, 0.05);
+}
+
+.iat-nav-link:active {
+    background-color: transparent;
+}
+
+.iat-nav-link:focus {
+    outline: none;
+}
+
+.iat-nav-link:focus-visible {
+    outline: 2px solid rgba(91, 33, 182, 0.12);
+    outline-offset: 2px;
+}
+
+.iat-nav-link,
+.iat-nav-link:active,
+.iat-nav-link:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-image: none !important;
+}
+
+.iat-nav-link.active {
+    color: #5b21b6;
+    /*background-color: rgba(91,33,182,0.06);*/
+    font-weight: 600;
+    box-shadow: none;
+    border-bottom: 2px solid #5b21b6 !important;
+}
+
+.iat-nav-item-cta .iat-nav-link {
+    color: #f39c12;
+    font-weight: 700;
+    padding: 8px 18px;
+    gap: 6px;
+    background-color: #f6f6f6;
+    border: 2px solid #54cadc;
+    border-radius: 10px;
+}
+
+.iat-nav-item-cta .iat-nav-link.active {
+    background: #f39c12;
+    color: #fff !important;
+    border-color: #f39c12;
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+}
+
+.iat-header-meta {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    color: #6b7280;
+    font-size: 12px;
+    padding-left: 8px;
+}
+
+.iat-plugin-version {
+    background: #f5f3ff;
+    color: #5b21b6;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    font-weight: 600;
+}
+
+.flashing-text {
+    font-weight: bold;
+    animation: flashColor 1s infinite;
+}
+
+@keyframes flashColor {
+    0% {
+        color: #fc5fa6;
+    }
+
+    50% {
+        color: #54cadc;
+    }
+
+    100% {
+        color: #fc5fa6;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1424px) {
+    a.media-hygiene-upgrade img {
+        width: 350px;
+    }
+
+    .iat-nav-link {
+        font-size: 12px;
+    }
+
+    .iat-header-inner {
+        gap: 16px;
+    }
+
+    .iat-brand-logo {
+        height: 70px;
+        max-width: 140px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1152px) {
+    a.media-hygiene-upgrade img {
+        width: 250px;
+    }
+
+    .iat-brand-logo {
+        height: 40px;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 991px) {
+    .iat-header-inner {
+        gap: 12px;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    a.media-hygiene-upgrade img {
+        width: 230px;
+    }
+
+    a.media-hygiene-upgrade {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .iat-brand-logo {
+        height: 40px;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 856px) {
+    a.media-hygiene-upgrade img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .iat-header-inner {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .iat-brand-left {
+        justify-content: center;
+        padding-bottom: 8px;
+    }
+
+    .iat-nav {
+        width: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+    }
+
+    .iat-nav-list {
+        min-width: max-content;
+    }
+
+    .iat-plugin-version {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .iat-nav-link {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .iat-brand-logo {
+        height: 36px;
+    }
+}
+
+.iat-nav-link-pro.active {
+    background: #f39c12;
+    color: #ffffff !important;
+    border-color: #f39c12;
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.iat-actions {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    /* Reduced from 15px */
+}
+
+.iat-action-btn {
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Increased from 8px */
+    border-radius: 3px;
+    width: 28px;
+    /* Increased from 24px */
+    height: 28px;
+    /* Increased from 24px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 13px;
+    /* Increased from 12px */
+}
+
+.iat-action-btn:hover {
+    background-color: rgba(34, 113, 177, 0.1);
+    color: #2271b1;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .iat-header-inner {
+        gap: 16px;
+        padding: 10px 16px;
+    }
+
+    .iat-brand-logo {
+        height: 36px;
+        max-width: 140px;
+    }
+
+    .iat-nav-link {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .iat-header-container {
+        margin: 15px 15px 20px 0;
+        border-radius: 10px;
+    }
+
+    .iat-brand {
+        justify-content: center;
+        padding: 6px 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .iat-brand-logo {
+        height: 32px;
+        max-width: 50px;
+    }
+
+    .iat-nav-list {
+        min-width: max-content;
+        gap: 6px;
+    }
+
+    .iat-nav-link {
+        padding: 7px 13px;
+        font-size: 11px;
+    }
+
+    .iat-actions {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .iat-nav-link {
+        padding: 7px 12px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 490px) {
+    .iat-brand-left {
+        border-bottom: 1px solid #eaeaea;
+        width: 100%;
+    }
+
+    .iat-nav {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .iat-brand-logo {
+        height: 62px;
+        max-width: 120px;
+    }
+}

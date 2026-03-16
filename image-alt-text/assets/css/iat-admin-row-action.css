@@ -1,0 +1,229 @@
+/* WordPress Dashicon Spinner Animation */
+@keyframes iat-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.iat-spin {
+    animation: iat-spin 1s linear infinite;
+}
+
+/* Processing Message - Replaces Button */
+.iat-copy-processing {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background: #f5f3ff;
+    color: #764ba2;
+    border: 1px solid #ddd6fe;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    height: 28px;
+    white-space: nowrap;
+}
+
+.iat-copy-processing .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+/* Unified Update Message Styles for Row Actions - Below Button */
+.iat-row-update-message,
+.iat-update-success,
+.iat-update-duplicate {
+    display: none;
+    position: relative;
+    margin-top: 4px;
+    padding: 6px 12px;
+    font-size: 10px;
+    line-height: 1.4;
+    border-radius: 6px;
+    text-align: left;
+    z-index: 10;
+    height: 28px;
+    font-weight: 600;
+    align-items: center;
+}
+
+.iat-row-update-message.success,
+.iat-update-success {
+    background: #d1fae5;
+    color: #059669;
+    border: 1px solid #6ee7b7;
+}
+
+.iat-row-update-message.duplicate,
+.iat-update-duplicate {
+    background: #fef3c7;
+    color: #d97706;
+    border: 1px solid #fcd34d;
+}
+
+/* Unified Row Action Message Styles */
+.iat-row-action-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.125rem 0.375rem;
+    font-size: 9px;
+    line-height: 1.4;
+    border-radius: 0.25rem;
+    text-align: center;
+    border: 1px solid;
+    z-index: 10;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-top: 2px;
+}
+
+/* Success: Used for copy filename, copy title success */
+.iat-row-action-message.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-color: #badbcc;
+}
+
+/* Warning: Used for duplicate alt text, already exists, etc. */
+.iat-row-action-message.warning {
+    background-color: #fff3cd;
+    color: #664d03;
+    border-color: #ffecb5;
+}
+
+/* Error: Used for error messages */
+.iat-row-action-message.error {
+    background-color: #fcebea;
+    color: #dc3232;
+    border-color: #f1a9a0;
+}
+
+/* Info: Used for neutral info messages */
+.iat-row-action-message.info {
+    background-color: #f0f6fc;
+    color: #2271b1;
+    border-color: #c6d8e9;
+}
+
+
+/* For backward compatibility, map old classes to new unified style */
+.iat-copy-success,
+.iat-copy-filename-success,
+.iat-copy-title-success,
+.iat-row-action-message.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-color: #badbcc;
+}
+
+.iat-copy-duplicate,
+.iat-copy-filename-duplicate,
+.iat-copy-title-duplicate,
+.iat-row-action-message.warning {
+    background-color: #fff3cd;
+    color: #664d03;
+    border-color: #ffecb5;
+}
+
+.iat-copy-error,
+.iat-copy-filename-error,
+.iat-copy-title-error,
+.iat-row-action-message.error {
+    background-color: #fcebea;
+    color: #dc3232;
+    border-color: #f1a9a0;
+}
+
+.iat-copy-info,
+.iat-copy-filename-info,
+.iat-copy-title-info,
+.iat-row-action-message.info {
+    background-color: #f0f6fc;
+    color: #2271b1;
+    border-color: #c6d8e9;
+}
+
+/* Row Action Styles moved from iat-admin-list.css */
+.iat-copy-title-action {
+    position: relative;
+}
+
+.iat-copy-title-to-alt,
+.iat-copy-filename-to-alt,
+.btn-outline-info {
+    display: inline-flex;
+    align-items: center;
+    font-size: 10px;
+    color: #764ba2;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #ddd6fe;
+    border: 1px solid #764ba2;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    cursor: pointer;
+    height: 28px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.iat-copy-title-to-alt:hover,
+.iat-copy-filename-to-alt:hover,
+.btn-outline-info:hover {
+    background: #764ba2;
+    border-color: #764ba2;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(118, 75, 162, 0.25);
+}
+
+.iat-copy-icon {
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+    margin-right: 6px;
+}
+
+.iat-copy-text {
+    line-height: 1;
+    font-size: 10px;
+}
+
+/* Modern success/warning messages below button */
+.iat-copy-success,
+.iat-copy-duplicate {
+    display: none;
+    position: relative;
+    margin-top: 4px;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 6px;
+    text-align: left;
+    z-index: 10;
+    height: 28px;
+    align-items: center;
+}
+
+.iat-copy-success {
+    background: #d1fae5;
+    color: #059669;
+    border: 1px solid #6ee7b7;
+}
+
+.iat-copy-duplicate {
+    background: #fef3c7;
+    color: #d97706;
+    border: 1px solid #fcd34d;
+}
