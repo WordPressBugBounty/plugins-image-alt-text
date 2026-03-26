@@ -34,7 +34,7 @@ We would always love to hear from you about plugin issue, queries and enhancemen
 
 3. Provides a option in both existing and missing alternative list to copy file name as alternative media file.
 	
-4. Provides a button to update alternative text to missing alternative media file in bulk.
+4. Provides a dropdown to update alternative text to missing alternative media file in bulk.
 
 5. Search images easily with available table column header.
 
@@ -82,9 +82,14 @@ Buy Pro **[Image Alt Text](https://imagealttext.in/pricing/)**
  
 This plugin allow you to easily edit the alternative text of images on the same page. It is easy for images with different parameters without page refresh.
 
-= How does this work for Bulk Alt Text? = 
- 
-This button is available only in tab **Media Without Alt**. When you press this button, it will ask your confirmation to copy file name to images where alternative text is missing. After confirmation it will copy for all the alternative text for all images that do not had the alt text.
+= Why Use Bulk Alt Text? =
+
+* Improve **Image SEO** by ensuring images have descriptive alt text.
+* Boost **accessibility** for screen readers and assistive technologies.
+* Save time by updating alt text for many images at once.
+* Optimize existing media libraries without editing images individually.
+
+This feature is especially useful for websites with large media libraries that need quick alt text optimization for better search engine visibility and accessibility compliance.
 
 = Is there any redo button for **Bulk Alt Text** button? = 
  
@@ -96,10 +101,8 @@ Please reach out via the official support forum on WordPress.org.
 
 == Screenshots ==
 
-1. Version 3.0.0 - Images with Alternative Text
-2. Version 3.0.0 - Images without Alternative Text
-3. Version 4.0.0 - Images with Alt Text — redesigned smart inline editor with Copy Title to Alt, Copy Filename to Alt, Save/Reset buttons, Size column and Bulk Actions
-4. Version 4.0.0 - Images without Alt Text — redesigned layout with bulk checkbox selection, inline alt text editor and improved action buttons
+1. Version 4.0.0 - Images with Alt Text — redesigned smart inline editor with Copy Title to Alt, Copy Filename to Alt, Save/Reset buttons, Size column and Bulk Actions
+2. Version 4.0.0 - Images without Alt Text — redesigned layout with bulk checkbox selection, inline alt text editor and improved action buttons
 
 
 = Minimum Requirements =
