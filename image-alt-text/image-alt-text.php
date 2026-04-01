@@ -4,7 +4,7 @@
  * Plugin Name: Image Alt Text
  * Plugin URI: https://wordpress.org/plugins/image-alt-text/
  * Description: Easily manage, add, and update image alt text to enhance website accessibility and improve SEO performance.
- * Version: 4.0.0
+ * Version: 4.0.1
  * Author: RS WebStudios
  * Author URI: https://rswebstudios.com
  * License: GPLv2 or later

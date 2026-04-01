@@ -7,7 +7,7 @@ Tags: image alt text, image alternative text, image alternative, image alt, alt 
 Requires at least: 5.3
 Requires PHP: 7.4
 Tested up to: 6.9
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,7 +15,7 @@ Image Alt Text plugin allows to edit image alternative text of uploaded media. I
 
 == Description ==
 
-https://www.youtube.com/watch?v=r2y3zyvMyek
+https://www.youtube.com/watch?v=-LJedDFilD0
 
 The "Image Alt Text" plugin is a simple yet powerful tool that allows website owners and content creators to easily edit the alt tags for images on their website. Alt tags, or alternative text descriptions, are important for both accessibility and search engine optimization (SEO) purposes, as they provide a textual description of an image for users who are visually impaired or for search engines that cannot interpret images.
 
@@ -44,21 +44,30 @@ We would always love to hear from you about plugin issue, queries and enhancemen
 
 == Pro Features ==
 
-Buy Pro **[Image Alt Text](https://imagealttext.in/pricing/)**
+**Unlike other AI alt text plugins that charge per image or lock you into expensive monthly plans, Image Alt Text Pro runs on a yearly subscription with no per-image fees, no credit limits, and no third-party API account required. Built-in Smart Auto-Fill generates unlimited alt text included in your plan. For users who want GPT-4o quality, simply connect your own OpenAI key and pay OpenAI directly at their standard rate.**
 
-1. **AI-Powered Alt Text Generation** — Auto-generate alt text on image upload using Local AI (smart metadata + EXIF analysis, no API key needed), OpenAI GPT-4o Vision, Post Title, or File Name.
+**Buy Pro** **[Image Alt Text](https://imagealttext.in/)**
 
-2. **OpenAI / ChatGPT Integration** — Connect your OpenAI API key and use a custom prompt to generate contextual, SEO-friendly alt text automatically.
+1. **Smart Auto-Fill — Unlimited Alt Text, No API Key, No Per-Image Fees**
+Generate alt text for your entire media library using built-in Smart Auto-Fill — unlimited, private, and fully included in your Pro plan. No third-party API account needed, no external service, no per-image charges. Perfect for sites with hundreds or thousands of images.
 
-3. **SEO Status Column** — Every image is rated Excellent, Good, or Poor based on alt text quality, directly in the image list.
+2. **OpenAI / ChatGPT Integration — Use Your Own API Key**
+Already have an OpenAI account? Connect your own API key and generate highly descriptive, context-aware alt text using GPT-4o Vision. Write a custom prompt tailored to your site's tone and SEO goals. You pay OpenAI directly at their standard rate — no markups, no bundles.
 
-4. **Highlight Missing Alt Text on Frontend** — Visually outline images without alt text on your live site with a configurable highlight colour to quickly spot accessibility gaps.
+3. **Auto-Generate Alt Text on Every Upload**
+Set it and forget it. The moment an image is uploaded, alt text is generated automatically using your preferred method (Smart Auto-Fill, OpenAI, Post Title, or Filename). No manual steps required.
 
-5. **Date Range Filters** — Filter the image list by Today, Last 7 Days, Last 30 Days, Last 6 Months, Last 12 Months, Last 3 Years, or a custom date range.
+4. **SEO Quality Score for Every Image**
+Every image in your library is rated Excellent, Good, or Poor based on alt text quality — so you can prioritise which images need attention first.
 
-6. **Auto Add Alt Text on Upload** — Automatically populate alt text the moment an image is uploaded, using your preferred generation method.
+5. **Visually Spot Missing Alt Text on Your Live Site**
+Enable a frontend highlight to outline images missing alt text directly on your published pages. Instantly see where the gaps are without digging through the media library.
 
-7. **Settings Page** — Central settings panel for AI configuration, highlight options, and upload automation preferences.
+6. **Advanced Date Range Filters**
+Filter your image list by Today, Last 7 Days, Last 30 Days, Last 6 Months, Last 12 Months, Last 3 Years, or a custom range — ideal for large media libraries or audits.
+
+7. **Central Settings Panel**
+One place to configure AI method, OpenAI key + custom prompt, upload automation, and highlight preferences.
 
 
 == Installation ==
@@ -91,7 +100,7 @@ This plugin allow you to easily edit the alternative text of images on the same 
 
 This feature is especially useful for websites with large media libraries that need quick alt text optimization for better search engine visibility and accessibility compliance.
 
-= Is there any redo button for **Bulk Alt Text** button? = 
+= Is there any redo button for Bulk Alt Text button? = 
  
 No, there is not redo button for now.
 
