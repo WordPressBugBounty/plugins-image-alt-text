@@ -14,99 +14,111 @@
 
 .iat-review-notice {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    background: #f0f6fc;
-    border: 1px solid #b8d4f0;
-    border-left: 4px solid #667eea;
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin: 0 20px 10px 0;
+    align-items: center;
+    gap: 14px;
+    background: #faf5ff;
+    border: 1px solid #ede9f6;
+    border-left: 4px solid #7c3aed;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 0 20px 12px 0;
     font-size: 13px;
     color: #1d2327;
     line-height: 1.5;
+    box-shadow: 0 1px 4px rgba(124, 58, 237, 0.07);
 }
 
 .iat-review-notice-icon {
-    font-size: 20px;
+    font-size: 22px;
     color: #f0b429;
     flex-shrink: 0;
-    margin-top: 1px;
+    filter: drop-shadow(0 1px 2px rgba(240, 180, 41, 0.4));
 }
 
 .iat-review-notice p {
-    margin: 0 0 10px 0;
+    margin: 0;
     flex: 1;
+    color: #374151;
 }
 
 .iat-review-notice-actions {
     display: flex;
+    align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 4px;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
 }
 
 .iat-review-btn {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 6px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     border: 1px solid transparent;
     text-decoration: none;
-    line-height: 1.6;
+    line-height: 1.5;
+    white-space: nowrap;
+    transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.15s ease;
 }
 
 .iat-review-btn-primary {
-    background: #667eea;
-    border-color: #667eea;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border-color: transparent;
     color: #fff !important;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
 }
 
 .iat-review-btn-primary:hover {
-    background: #5a67d8;
-    border-color: #5a67d8;
+    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.45);
+    transform: translateY(-1px);
     color: #fff !important;
 }
 
 .iat-review-btn-secondary {
-    background: #fff;
-    border-color: #c3c4c7;
-    color: #2c3338;
+    background: #ffffff;
+    border-color: #d1d5db;
+    color: #374151;
 }
 
 .iat-review-btn-secondary:hover {
-    background: #f6f7f7;
-    border-color: #8c8f94;
+    background: #f9fafb;
+    border-color: #9ca3af;
+    color: #111827;
 }
 
 .iat-review-btn-muted {
     background: transparent;
     border-color: transparent;
-    color: #787c82;
-    padding-left: 4px;
-    padding-right: 4px;
+    color: #9ca3af;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-weight: 500;
 }
 
 .iat-review-btn-muted:hover {
-    color: #2c3338;
+    color: #6b7280;
 }
 
 @media (max-width: 782px) {
     .iat-review-notice {
         flex-direction: column;
-        gap: 8px;
+        align-items: flex-start;
+        gap: 10px;
         margin-right: 10px;
     }
 
     .iat-review-notice-actions {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .iat-review-btn {
         width: 100%;
         text-align: center;
+        justify-content: center;
         box-sizing: border-box;
     }
 }

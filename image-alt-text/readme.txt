@@ -7,7 +7,7 @@ Tags: image alt text, image alternative text, image alternative, image alt, alt 
 Requires at least: 5.3
 Requires PHP: 7.4
 Tested up to: 6.9
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,30 +44,39 @@ We would always love to hear from you about plugin issue, queries and enhancemen
 
 == Pro Features ==
 
-**Unlike other AI alt text plugins that charge per image or lock you into expensive monthly plans, Image Alt Text Pro runs on a yearly subscription with no per-image fees, no credit limits, and no third-party API account required. Built-in Smart Auto-Fill generates unlimited alt text included in your plan. For users who want GPT-4o quality, simply connect your own OpenAI key and pay OpenAI directly at their standard rate.**
+**Image Alt Text Pro gives you 4 leading AI vision providers on a simple yearly plan — no per-image fees, no credit limits. Bring your own API key and pay the provider directly at their standard rate.**
 
-**Buy Pro** **[Image Alt Text](https://imagealttext.in/)**
+**Buy Pro** **[Image Alt Text](https://imagealttext.in/pricing/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=get_pro&utm_content=readme_pro_features)**
 
-1. **Smart Auto-Fill — Unlimited Alt Text, No API Key, No Per-Image Fees**
-Generate alt text for your entire media library using built-in Smart Auto-Fill — unlimited, private, and fully included in your Pro plan. No third-party API account needed, no external service, no per-image charges. Perfect for sites with hundreds or thousands of images.
+1. **4 AI Vision Providers — Bring Your Own Key**
+Generate highly accurate, SEO-friendly alt text using OpenAI GPT-4o, Google Gemini 2.0 Flash, Claude AI (Haiku), or Hugging Face (Qwen2.5-VL). Connect any provider with your own API key. Write a custom prompt tailored to your site's tone and SEO goals. You pay the AI provider directly — no markups, no bundles.
 
-2. **OpenAI / ChatGPT Integration — Use Your Own API Key**
-Already have an OpenAI account? Connect your own API key and generate highly descriptive, context-aware alt text using GPT-4o Vision. Write a custom prompt tailored to your site's tone and SEO goals. You pay OpenAI directly at their standard rate — no markups, no bundles.
+2. **Auto-Generate Alt Text on Every Upload**
+Set it and forget it. The moment an image is uploaded, alt text is generated automatically using your preferred method (OpenAI, Gemini, Claude, Hugging Face, Post Title, or Filename). No manual steps required.
 
-3. **Auto-Generate Alt Text on Every Upload**
-Set it and forget it. The moment an image is uploaded, alt text is generated automatically using your preferred method (Smart Auto-Fill, OpenAI, Post Title, or Filename). No manual steps required.
+3. **One-Shot Bulk Actions**
+Process every image in your current view with a single click. No selection needed — just pick an action (Copy Title, Copy Filename, or any AI provider) and click Process. Configurable batch size controls how many images are sent to the AI API per request.
 
-4. **SEO Quality Score for Every Image**
-Every image in your library is rated Excellent, Good, or Poor based on alt text quality — so you can prioritise which images need attention first.
+4. **Unlimited Bulk AI Selection**
+Select any number of images in Bulk Action and run AI generation across all of them. Images are processed one at a time sequentially — no timeouts, no rate-limit errors regardless of selection size.
 
-5. **Visually Spot Missing Alt Text on Your Live Site**
+5. **Bulk Caption Actions**
+Copy post titles or filenames to image captions in bulk. Also supports per-image caption update directly from the image list.
+
+6. **Decorative Image Accessibility (WCAG 2.1)**
+Mark any image as decorative in the media library. The plugin automatically injects `role="presentation"` and `aria-hidden="true"` on the frontend so screen readers skip the image entirely. Covers both Gutenberg image blocks and PHP-rendered images.
+
+7. **SEO Quality Score for Every Image**
+Every image in your library is rated Excellent, Good, or Needs Work based on alt text quality — so you can prioritise which images need attention first.
+
+8. **Visually Spot Missing Alt Text on Your Live Site**
 Enable a frontend highlight to outline images missing alt text directly on your published pages. Instantly see where the gaps are without digging through the media library.
 
-6. **Advanced Date Range Filters**
+9. **Advanced Date Range Filters**
 Filter your image list by Today, Last 7 Days, Last 30 Days, Last 6 Months, Last 12 Months, Last 3 Years, or a custom range — ideal for large media libraries or audits.
 
-7. **Central Settings Panel**
-One place to configure AI method, OpenAI key + custom prompt, upload automation, and highlight preferences.
+10. **Central Settings Panel**
+Sidebar-navigated settings page to configure AI providers, API keys, custom prompts, upload automation, batch size, and highlight preferences — all in one place.
 
 
 == Installation ==
@@ -120,6 +129,16 @@ Please reach out via the official support forum on WordPress.org.
 * MySQL 5.6 or greater is recommended
 
 == Changelog ==
+
+= 4.0.2 =
+* Improvement - Admin header completely redesigned with purple brand identity, gradient top accent stripe, and subtle depth shadow for a more polished look.
+* Improvement - "Get Pro" header button replaced with a branded purple gradient CTA with ⚡ icon and smooth pulse animation — replacing the previous flashing text effect.
+* Improvement - Media Hygiene cross-promotion replaced with a compact pill badge in the header, linking to the free WordPress.org plugin page.
+* Improvement - Review notice updated to match brand colours with purple left accent, improved button hierarchy, and aligned single-row layout.
+* Improvement - Get Pro page hero section updated with 5 floating feature badges (AI Powered, SEO Optimized, WCAG Compliant, 8,000+ Active Sites, 4 AI Providers).
+* Improvement - Get Pro page CTA section headline and subline updated with accurate install count (8,000+ active sites) and stronger conversion copy.
+* Improvement - All UTM parameters standardised across Get Pro page links for accurate Google Analytics 4 traffic attribution.
+* Improvement - WordPress.org readme Buy Pro link updated with correct UTM tracking parameters.
 
 = 4.0.0 =
 * Improvement - Completely redesigned admin UI with a cleaner, more modern layout and updated plugin branding.

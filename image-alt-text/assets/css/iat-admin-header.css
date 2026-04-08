@@ -1,20 +1,28 @@
-/* --- HEADER/NAV: Perfect match to Pro version, iat prefix --- */
+/* ============================================================
+   IMAGE ALT TEXT — Admin Header (Free Version)
+   ============================================================ */
+
+/* Top gradient accent stripe */
 .iat-header-container {
     background: #ffffff;
     border-radius: 10px;
     margin: 10px 20px 10px 0;
-    border: 1px solid #eaeaea;
+    border: 1px solid #e5e7eb;
     overflow: hidden;
     font-size: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%) 1;
 }
 
 .iat-header-inner {
     display: flex;
     align-items: center;
-    gap: 26px;
-    padding: 8px 12px;
+    gap: 20px;
+    padding: 10px 16px;
 }
 
+/* ---- Brand ---- */
 .iat-brand-left {
     display: flex;
     align-items: center;
@@ -33,14 +41,15 @@
     object-fit: contain;
 }
 
+/* ---- Nav ---- */
 .iat-nav {
     display: flex;
     align-items: center;
     flex: 1 1 auto;
     min-width: 0;
     padding-left: 18px;
-    margin-left: 8px;
-    border-left: 1px solid #f3f3f3;
+    margin-left: 4px;
+    border-left: 1px solid #ede9f6;
 }
 
 .iat-nav-list {
@@ -48,67 +57,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 8px;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.iat-nav-item {
-    margin: 0;
-}
-
-/* --- Free version header/nav styles (no docs/changelog/extra nav links) --- */
-.iat-header-container {
-    background: #ffffff;
-    border-radius: 10px;
-    margin: 10px 20px 10px 0;
-    border: 1px solid #eaeaea;
-    overflow: hidden;
-    font-size: 12px;
-}
-
-.iat-header-inner {
-    display: flex;
-    align-items: center;
-    gap: 26px;
-    padding: 8px 12px;
-}
-
-.iat-brand-left {
-    display: flex;
-    align-items: center;
-    flex: 0 0 auto;
-}
-
-.iat-brand-link {
-    display: inline-flex;
-    align-items: center;
-}
-
-.iat-brand-logo {
-    height: 100px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-}
-
-.iat-nav {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    min-width: 0;
-    padding-left: 18px;
-    margin-left: 8px;
-    border-left: 1px solid #f3f3f3;
-}
-
-.iat-nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 8px;
+    gap: 4px;
     align-items: center;
     overflow: hidden;
     white-space: nowrap;
@@ -121,13 +70,13 @@
 .iat-nav-link {
     display: inline-flex;
     align-items: center;
-    padding: 10px 14px;
-    color: #374151;
+    padding: 7px 14px;
+    color: #4b5563;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    /*border-radius: 6px;*/
-    transition: color .18s ease, background-color .18s ease, border-bottom-color .18s ease;
+    border-radius: 6px;
+    transition: color 0.18s ease, background-color 0.18s ease, border-bottom-color 0.18s ease;
     border: none;
     border-bottom: 2.5px solid transparent;
     box-sizing: border-box;
@@ -135,304 +84,273 @@
 }
 
 .iat-nav-link:hover {
-    color: #5b21b6;
-    background-color: rgba(91, 33, 182, 0.05);
+    color: #7c3aed;
+    background-color: rgba(124, 58, 237, 0.07);
 }
 
-.iat-nav-link:active {
-    background-color: transparent;
-}
-
-.iat-nav-link:focus {
-    outline: none;
-}
-
-.iat-nav-link:focus-visible {
-    outline: 2px solid rgba(91, 33, 182, 0.12);
-    outline-offset: 2px;
-}
-
-.iat-nav-link,
 .iat-nav-link:active,
 .iat-nav-link:focus {
     outline: none !important;
     box-shadow: none !important;
-    border: none !important;
     background-image: none !important;
 }
 
+/* Restore Get Pro button gradient on all link states */
+.iat-nav-item-cta .iat-get-pro-btn:focus,
+.iat-nav-item-cta .iat-get-pro-btn:active,
+.iat-nav-item-cta .iat-get-pro-btn:visited {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
+    background-image: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+
+.iat-nav-link:focus-visible {
+    outline: 2px solid rgba(124, 58, 237, 0.25);
+    outline-offset: 2px;
+}
+
 .iat-nav-link.active {
-    color: #5b21b6;
-    /*background-color: rgba(91,33,182,0.06);*/
+    color: #7c3aed;
     font-weight: 600;
+    background-color: rgba(124, 58, 237, 0.07);
+    border-bottom: 2.5px solid #7c3aed !important;
     box-shadow: none;
-    border-bottom: 2px solid #5b21b6 !important;
 }
 
-.iat-nav-item-cta .iat-nav-link {
-    color: #f39c12;
+/* ---- Get Pro CTA button ---- */
+.iat-nav-item-cta .iat-get-pro-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 16px;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: #ffffff !important;
     font-weight: 700;
-    padding: 8px 18px;
-    gap: 6px;
-    background-color: #f6f6f6;
-    border: 2px solid #54cadc;
-    border-radius: 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    border: none !important;
+    border-bottom: none !important;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(124, 58, 237, 0.35);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    animation: iat-pro-pulse 2.4s ease-in-out infinite;
 }
 
-.iat-nav-item-cta .iat-nav-link.active {
-    background: #f39c12;
-    color: #fff !important;
-    border-color: #f39c12;
-    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+.iat-nav-item-cta .iat-get-pro-btn:hover {
+    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+    box-shadow: 0 5px 16px rgba(124, 58, 237, 0.5);
+    transform: translateY(-1px);
+    color: #ffffff !important;
 }
 
+.iat-nav-item-cta .iat-get-pro-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+}
+
+.iat-nav-item-cta .iat-get-pro-btn.active {
+    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%) !important;
+    box-shadow: 0 5px 16px rgba(124, 58, 237, 0.5) !important;
+}
+
+.iat-get-pro-icon {
+    font-size: 13px;
+    line-height: 1;
+}
+
+@keyframes iat-pro-pulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(124, 58, 237, 0.35);
+    }
+    50% {
+        box-shadow: 0 3px 18px rgba(124, 58, 237, 0.6);
+    }
+}
+
+/* ---- Header meta (version + pill grouped right) ---- */
 .iat-header-meta {
     display: flex;
     align-items: center;
+    gap: 10px;
     flex: 0 0 auto;
+    margin-left: auto;
     color: #6b7280;
     font-size: 12px;
-    padding-left: 8px;
 }
 
 .iat-plugin-version {
     background: #f5f3ff;
-    color: #5b21b6;
-    padding: 6px 8px;
+    color: #7c3aed;
+    padding: 4px 9px;
     border-radius: 6px;
-    border: 1px solid #eee;
+    border: 1px solid #ede9f6;
     font-weight: 600;
+    font-size: 11px;
+    white-space: nowrap;
 }
 
-.flashing-text {
-    font-weight: bold;
-    animation: flashColor 1s infinite;
+/* ---- Media Hygiene cross-promotion pill ---- */
+.iat-media-hygiene-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px 7px 10px;
+    background: linear-gradient(135deg, #c44dff 0%, #ff6b9d 100%);
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    flex: 0 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@keyframes flashColor {
-    0% {
-        color: #fc5fa6;
-    }
-
-    50% {
-        color: #54cadc;
-    }
-
-    100% {
-        color: #fc5fa6;
-    }
+.iat-media-hygiene-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(196, 77, 255, 0.45);
+    color: #ffffff;
 }
+
+.iat-mh-icon.dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.iat-mh-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.iat-mh-text strong {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.iat-mh-text span {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.iat-mh-cta {
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.22);
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
 
 @media screen and (min-width: 992px) and (max-width: 1424px) {
-    a.media-hygiene-upgrade img {
-        width: 350px;
-    }
-
     .iat-nav-link {
         font-size: 12px;
     }
 
     .iat-header-inner {
-        gap: 16px;
+        gap: 14px;
     }
 
     .iat-brand-logo {
-        height: 70px;
-        max-width: 140px;
+        height: 38px;
+        max-width: 160px;
     }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1152px) {
-    a.media-hygiene-upgrade img {
-        width: 250px;
+    .iat-brand-logo {
+        height: 34px;
+        max-width: 150px;
     }
 
-    .iat-brand-logo {
-        height: 40px;
-        max-width: 180px;
+    .iat-mh-text span {
+        display: none;
     }
 }
 
 @media (max-width: 991px) {
     .iat-header-inner {
         gap: 12px;
-        padding: 10px;
+        padding: 10px 14px;
         flex-wrap: wrap;
     }
 
-    a.media-hygiene-upgrade img {
-        width: 230px;
-    }
-
-    a.media-hygiene-upgrade {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .iat-brand-logo {
-        height: 40px;
-        max-width: 180px;
+        height: 36px;
+        max-width: 160px;
     }
-}
 
-@media (max-width: 856px) {
-    a.media-hygiene-upgrade img {
-        width: 100%;
+    .iat-mh-cta {
+        display: none;
+    }
+
+    .iat-mh-text span {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .iat-header-inner {
-        flex-direction: row;
-        align-items: stretch;
-        gap: 8px;
-        padding: 10px;
+    .iat-header-container {
+        margin: 10px 10px 10px 0;
+        border-radius: 8px;
     }
 
-    .iat-brand-left {
-        justify-content: center;
-        padding-bottom: 8px;
+    .iat-header-inner {
+        gap: 8px;
+        padding: 10px;
     }
 
     .iat-nav {
         width: auto;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-
     }
 
     .iat-nav-list {
         min-width: max-content;
-    }
-
-    .iat-plugin-version {
-        margin-left: auto;
-    }
-}
-
-@media (max-width: 576px) {
-    .iat-nav-link {
-        padding: 6px 8px;
-        font-size: 12px;
-    }
-
-    .iat-brand-logo {
-        height: 36px;
-    }
-}
-
-.iat-nav-link-pro.active {
-    background: #f39c12;
-    color: #ffffff !important;
-    border-color: #f39c12;
-    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-.iat-actions {
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    /* Reduced from 15px */
-}
-
-.iat-action-btn {
-    background: transparent;
-    border: none;
-    color: #6c757d;
-    cursor: pointer;
-    margin-left: 10px;
-    /* Increased from 8px */
-    border-radius: 3px;
-    width: 28px;
-    /* Increased from 24px */
-    height: 28px;
-    /* Increased from 24px */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    font-size: 13px;
-    /* Increased from 12px */
-}
-
-.iat-action-btn:hover {
-    background-color: rgba(34, 113, 177, 0.1);
-    color: #2271b1;
-}
-
-/* Responsive Design */
-@media (max-width: 991px) {
-    .iat-header-inner {
-        gap: 16px;
-        padding: 10px 16px;
-    }
-
-    .iat-brand-logo {
-        height: 36px;
-        max-width: 140px;
-    }
-
-    .iat-nav-link {
-        padding: 7px 15px;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 768px) {
-    .iat-header-container {
-        margin: 15px 15px 20px 0;
-        border-radius: 10px;
-    }
-
-    .iat-brand {
-        justify-content: center;
-        padding: 6px 0;
-        border-bottom: 1px solid #e5e7eb;
+        gap: 4px;
     }
 
     .iat-brand-logo {
         height: 32px;
-        max-width: 50px;
+        max-width: 140px;
     }
 
-    .iat-nav-list {
-        min-width: max-content;
-        gap: 6px;
-    }
-
-    .iat-nav-link {
-        padding: 7px 13px;
-        font-size: 11px;
-    }
-
-    .iat-actions {
-        display: none;
+    .iat-plugin-version {
+        margin-left: 0;
     }
 }
 
 @media (max-width: 576px) {
     .iat-nav-link {
-        padding: 7px 12px;
-        font-size: 10px;
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .iat-brand-logo {
+        height: 30px;
+    }
+
+    .iat-nav-item-cta .iat-get-pro-btn {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }
 
 @media (max-width: 490px) {
     .iat-brand-left {
-        border-bottom: 1px solid #eaeaea;
+        border-bottom: 1px solid #ede9f6;
         width: 100%;
+        padding-bottom: 8px;
     }
 
     .iat-nav {
@@ -442,7 +360,7 @@
     }
 
     .iat-brand-logo {
-        height: 62px;
-        max-width: 120px;
+        height: 36px;
+        max-width: 140px;
     }
 }

@@ -26,7 +26,8 @@ $plugin_version = defined('IAT_PLUGIN_VERSION') ? IAT_PLUGIN_VERSION : '';
                     </li>
                 <?php endforeach; ?>
                 <li class="iat-nav-item iat-nav-item-cta">
-                    <a href="<?php echo esc_url(admin_url('admin.php?page=iat-get-pro')); ?>" target="_blank" class="iat-nav-link flashing-text <?php echo ($current === 'iat-get-pro') ? 'active' : ''; ?>">
+                    <a href="<?php echo esc_url(admin_url('admin.php?page=iat-get-pro')); ?>" target="_blank" class="iat-nav-link iat-get-pro-btn <?php echo ($current === 'iat-get-pro') ? 'active' : ''; ?>">
+                        <span class="iat-get-pro-icon">⚡</span>
                         <?php echo esc_html__('Get Pro', 'image-alt-text'); ?>
                     </a>
                 </li>
@@ -37,8 +38,13 @@ $plugin_version = defined('IAT_PLUGIN_VERSION') ? IAT_PLUGIN_VERSION : '';
                 <span class="iat-plugin-version"><?php echo esc_html(sprintf('v%s', $plugin_version)); ?></span>
             <?php endif; ?>
         </div>
-        <a class="media-hygiene-upgrade" href="https://mediahygiene.com/?utm_source=image_alt_text_plugin&utm_medium=iat_plugin&utm_campaign=get_pro_page&utm_content=get_pro" target="_blank">
-            <img style="float:right;" src="<?php echo esc_url(IAT_PLUGIN_URL . 'assets/images/media-hygiene-promotion.jpg'); ?>" alt="<?php esc_attr_e('Media Hygiene', 'image-alt-text'); ?>">
+        <a class="iat-media-hygiene-pill" href="https://wordpress.org/plugins/media-hygiene/" target="_blank">
+            <span class="iat-mh-icon dashicons dashicons-trash"></span>
+            <span class="iat-mh-text">
+                <strong><?php esc_html_e('Media Hygiene', 'image-alt-text'); ?></strong>
+                <span><?php esc_html_e('Remove unused media files', 'image-alt-text'); ?></span>
+            </span>
+            <span class="iat-mh-cta"><?php esc_html_e('Try Free →', 'image-alt-text'); ?></span>
         </a>
     </div>
 </div>
