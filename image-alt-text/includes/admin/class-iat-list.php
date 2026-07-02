@@ -128,7 +128,7 @@ class Iat_List
 
         $html = '<div class="iat-image" id="iat-image-' . esc_attr($post_id) . '">';
         $html .= '<a href="' . esc_url($full_image_url) . '" target="_blank" rel="noopener noreferrer" title="' . esc_attr__('Open full image in new tab', 'image-alt-text') . '">';
-        $html .= '<img src="' . esc_url($thumbnail_url) . '" alt="Thumbnail" class="img-thumbnail" />';
+        $html .= '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr__('Thumbnail', 'image-alt-text') . '" class="img-thumbnail" />';
         $html .= '</a>';
         $html .= '</div>';
         return $html;
@@ -160,16 +160,16 @@ class Iat_List
         $filename = basename($url);
         $filename_without_ext = pathinfo($filename, PATHINFO_FILENAME);
         $html = '<div class="iat-url" id="iat-url-' . esc_attr($post_id) . '">';
-        $html .= '<a href="#" class="iat-copy-url" data-url="' . esc_attr($url) . '" title="Click to copy URL">' . esc_url(($url)) . '</a>';
-        $html .= '<span class="iat-url-copied">URL copied!</span>';
+        $html .= '<a href="#" class="iat-copy-url" data-url="' . esc_attr($url) . '" title="' . esc_attr__('Click to copy URL', 'image-alt-text') . '">' . esc_url(($url)) . '</a>';
+        $html .= '<span class="iat-url-copied">' . esc_html__('URL copied!', 'image-alt-text') . '</span>';
         if (!empty(trim($filename_without_ext))) {
             $html .= '<div class="iat-copy-url-action">';
-            $html .= '<button type="button" class="iat-copy-filename-to-alt" data-post_id="' . esc_attr($post_id) . '" data-filename="' . esc_attr($filename_without_ext) . '" title="Copy filename to alt text">';
+            $html .= '<button type="button" class="iat-copy-filename-to-alt" data-post_id="' . esc_attr($post_id) . '" data-filename="' . esc_attr($filename_without_ext) . '" title="' . esc_attr__('Copy filename to alt text', 'image-alt-text') . '">';
             $html .= '<span class="dashicons dashicons-admin-page iat-copy-icon"></span>';
-            $html .= '<span class="iat-copy-text">Copy Filename to Alt</span>';
+            $html .= '<span class="iat-copy-text">' . esc_html__('Copy Filename to Alt', 'image-alt-text') . '</span>';
             $html .= '</button>';
-            $html .= '<span class="iat-update-success">✓ Added!</span>';
-            $html .= '<span class="iat-update-duplicate">Already same.</span>';
+            $html .= '<span class="iat-update-success">' . esc_html__('✓ Added!', 'image-alt-text') . '</span>';
+            $html .= '<span class="iat-update-duplicate">' . esc_html__('Already same.', 'image-alt-text') . '</span>';
             $html .= '</div>';
         }
 
@@ -213,7 +213,7 @@ class Iat_List
         $html .= '<div class="iat-smart-alt-editor-wrapper" id="iat-smart-alt-editor-wrapper-' . esc_attr($post_id) . '">';
 
         // Smart input field with integrated functionality (no border wrapper)
-        $placeholder = !empty($alt_text) ? 'Edit alt text...' : 'Enter alt text for this image...';
+        $placeholder = !empty($alt_text) ? __('Edit alt text...', 'image-alt-text') : __('Enter alt text for this image...', 'image-alt-text');
         $html .= '<div class="iat-input-container">';
         $html .= '<input type="text" class="iat-smart-alt-input" value="' . esc_attr($alt_text) . '" ';
         $html .= 'data-post_id="' . esc_attr($post_id) . '" ';
@@ -224,15 +224,15 @@ class Iat_List
         $html .= '<div class="iat-input-actions">';
 
         // Save button - always visible but disabled when empty
-        $html .= '<button type="button" class="iat-save-btn iat-btn-small" data-post_id="' . esc_attr($post_id) . '" disabled title="💾 Save Alt Text to Database">';
+        $html .= '<button type="button" class="iat-save-btn iat-btn-small" data-post_id="' . esc_attr($post_id) . '" disabled title="' . esc_attr__('💾 Save Alt Text to Database', 'image-alt-text') . '">';
         $html .= '<span class="dashicons dashicons-yes-alt"></span>';
-        $html .= '<span class="iat-btn-label">Save</span>';
+        $html .= '<span class="iat-btn-label">' . esc_html__('Save', 'image-alt-text') . '</span>';
         $html .= '</button>';
 
         // Reset button - smaller
-        $html .= '<button type="button" class="iat-reset-btn iat-btn-small" data-post_id="' . esc_attr($post_id) . '" style="display: none;" title="↶ Reset to Original Text">';
+        $html .= '<button type="button" class="iat-reset-btn iat-btn-small" data-post_id="' . esc_attr($post_id) . '" style="display: none;" title="' . esc_attr__('↶ Reset to Original Text', 'image-alt-text') . '">';
         $html .= '<span class="dashicons dashicons-undo"></span>';
-        $html .= '<span class="iat-btn-label">Reset</span>';
+        $html .= '<span class="iat-btn-label">' . esc_html__('Reset', 'image-alt-text') . '</span>';
         $html .= '</button>';
 
         $html .= '</div>';
@@ -256,7 +256,8 @@ class Iat_List
 
         $html = '<div class="iat-date" id="iat-date-' . esc_attr($post_id) . '">';
         $html .= '<span title="' . esc_attr($formatted_date) . '">' . esc_html($formatted_date) . '</span>';
-        $html .= '<div class="iat-date-ago">(' . esc_html($human_time_diff) . ' ago)</div>';
+        /* translators: %s: human-readable time difference, e.g. "5 mins" */
+        $html .= '<div class="iat-date-ago">' . sprintf(esc_html__('(%s ago)', 'image-alt-text'), esc_html($human_time_diff)) . '</div>';
         $html .= '</div>';
         return $html;
     }

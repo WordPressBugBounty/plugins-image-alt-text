@@ -36,6 +36,9 @@ class iat_Row_Action
         $post_id = isset($_POST['post_id']) ? absint($_POST['post_id']) : 0;
         $alt_text = isset($_POST['alt_text']) ? sanitize_text_field(wp_unslash($_POST['alt_text'])) : '';
 
+        // Clean the title into readable alt text (strips -/_ separators, fixes casing).
+        $alt_text = iat_clean_title_for_alt($alt_text);
+
         // Validate post ID
         if ($post_id <= 0) {
             wp_send_json_error(array('message' => __('Invalid image ID.', 'image-alt-text')));
@@ -102,7 +105,9 @@ class iat_Row_Action
         $url = wp_get_attachment_url($post_id);
         if ($url) {
             $filename = basename($url);
-            $filename_no_ext = sanitize_text_field(preg_replace('/\.[^.]+$/', '', $filename));
+            $filename_no_ext = pathinfo($filename, PATHINFO_FILENAME);
+            // Clean the raw filename into readable alt text (strips -scaled, dimensions, separators).
+            $filename_no_ext = sanitize_text_field(iat_clean_filename_for_alt($filename_no_ext));
             $current_alt = get_post_meta($post_id, '_wp_attachment_image_alt', true);
             if ($current_alt === $filename_no_ext) {
                 wp_send_json_success(array(
@@ -138,6 +143,10 @@ class iat_Row_Action
         $alt_text = isset($_POST['alt_text']) ? sanitize_text_field(wp_unslash($_POST['alt_text'])) : '';
         if ($post_id <= 0) {
             wp_send_json_error(array('message' => __('Invalid image ID.', 'image-alt-text')));
+        }
+        // Only allow writing alt text to image attachments (consistency with the other handlers).
+        if (get_post_type($post_id) !== 'attachment') {
+            wp_send_json_error(array('message' => __('Image not found.', 'image-alt-text')));
         }
         update_post_meta($post_id, '_wp_attachment_image_alt', $alt_text);
         wp_send_json_success(array('message' => __('Alt text saved.', 'image-alt-text'), 'alt_text' => $alt_text));

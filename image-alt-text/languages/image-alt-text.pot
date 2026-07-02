@@ -1,0 +1,1028 @@
+# Copyright (C) 2026 RS WebStudios
+# This file is distributed under the same license as the Image Alt Text plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Alt Text 4.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/image-alt-text\n"
+"POT-Creation-Date: 2026-07-02T09:58:49+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: image-alt-text\n"
+
+#: image-alt-text.php:259
+msgid "Rate this plugin ★★★★★"
+msgstr ""
+
+#: image-alt-text.php:260
+msgid "Upgrade to Pro →"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:22 includes/admin/class-iat-admin-menu.php:23 includes/admin/class-iat-review-notice.php:79 views/admin/iat-header-view.php:16
+msgid "Image Alt Text"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:33 includes/admin/class-iat-admin-menu.php:34 views/admin/iat-header-view.php:8
+msgid "Without Alt Text"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:42 includes/admin/class-iat-admin-menu.php:43
+msgid "Get Pro"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:163 includes/admin/class-iat-list.php:164
+msgid "URL copied!"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:164 includes/admin/class-iat-admin-menu.php:203
+msgid "Processing..."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:165
+msgid "Copied!"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:166
+msgid "Added!"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:167
+msgid "Alt text is already same."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:168
+msgid "Error saving!"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:169
+msgid "Saving..."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:170
+msgid "Alt text saved successfully"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:171
+msgid "This alt text is already set"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:172
+msgid "Failed to save. Please try again."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:173
+msgid "Network error - please try again"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:174
+msgid "Network error. Please check your connection."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:176
+msgid "Choose action..."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:177
+msgid "Please select an action first."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:178
+msgid "Please select at least one image to process."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:179 views/admin/iat-bulk-action-view.php:27 views/admin/iat-get-pro-view.php:275
+msgid "Copy Title to Alt Text"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:180 views/admin/iat-bulk-action-view.php:28 views/admin/iat-get-pro-view.php:280
+msgid "Copy Filename to Alt Text"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:181
+msgid "Images without a title will be skipped."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:182
+msgid "Images where the alt text already matches the title will be skipped."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:183
+msgid "Images where the URL is not found will be skipped."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:184
+msgid "Images where the alt text already matches the filename will be skipped."
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:185
+msgid "Confirm Bulk Action"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:187
+msgid "%1$s for %2$d image(s)"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:188
+msgid "Yes, process it!"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:189
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:190 views/admin/iat-bulk-action-view.php:34
+msgid "Process"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:191
+msgid "Bulk action completed successfully!"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:192
+msgid "Processing failed"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:194
+msgid "Error: %s"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:196
+msgid "Search:"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:197
+msgid "Show _MENU_ entries"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:198
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:199
+msgid "Showing 0 to 0 of 0 entries"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:200
+msgid "(filtered from _MAX_ total entries)"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:201
+msgid "No matching images found"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:202
+msgid "No images found"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:204
+msgid "First"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:205
+msgid "Last"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:206 views/admin/iat-get-pro-view.php:491
+msgid "Next"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:207 views/admin/iat-get-pro-view.php:397
+msgid "Previous"
+msgstr ""
+
+#: includes/admin/class-iat-admin-menu.php:220 includes/admin/class-iat-admin-menu.php:229 includes/admin/class-iat-admin-menu.php:238
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: includes/admin/class-iat-bulk-action.php:25
+msgid "Security check failed. Please refresh the page and try again."
+msgstr ""
+
+#: includes/admin/class-iat-bulk-action.php:32
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: includes/admin/class-iat-bulk-action.php:43
+msgid "Invalid action type selected."
+msgstr ""
+
+#: includes/admin/class-iat-bulk-action.php:49
+msgid "No images selected for processing."
+msgstr ""
+
+#: includes/admin/class-iat-bulk-action.php:65
+msgid "No valid image attachments found in your selection."
+msgstr ""
+
+#: includes/admin/class-iat-list.php:18 includes/admin/class-iat-row-action.php:27 includes/admin/class-iat-row-action.php:81 includes/admin/class-iat-row-action.php:137 includes/admin/class-iat-row-action.php:158
+msgid "Security check failed."
+msgstr ""
+
+#: includes/admin/class-iat-list.php:24 includes/admin/class-iat-row-action.php:32 includes/admin/class-iat-row-action.php:86 includes/admin/class-iat-row-action.php:140
+msgid "Unauthorized."
+msgstr ""
+
+#: includes/admin/class-iat-list.php:59
+msgid "Invalid request type."
+msgstr ""
+
+#: includes/admin/class-iat-list.php:130
+msgid "Open full image in new tab"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:131
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:145
+msgid "Copy title to alt text"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:147
+msgid "Copy Title to Alt"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:149
+msgid "✓ Copied!"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:150 includes/admin/class-iat-list.php:172
+msgid "Already same."
+msgstr ""
+
+#: includes/admin/class-iat-list.php:163
+msgid "Click to copy URL"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:167
+msgid "Copy filename to alt text"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:169
+msgid "Copy Filename to Alt"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:171
+msgid "✓ Added!"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:216
+msgid "Edit alt text..."
+msgstr ""
+
+#: includes/admin/class-iat-list.php:216
+msgid "Enter alt text for this image..."
+msgstr ""
+
+#: includes/admin/class-iat-list.php:227
+msgid "💾 Save Alt Text to Database"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:229
+msgid "Save"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:233
+msgid "↶ Reset to Original Text"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:235
+msgid "Reset"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:260
+msgid "(%s ago)"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:270
+msgid "Edit in Media Library"
+msgstr ""
+
+#: includes/admin/class-iat-list.php:276
+msgid "View Full Image"
+msgstr ""
+
+#: includes/admin/class-iat-review-notice.php:78
+msgid "If you've found our WordPress plugin %s helpful, we would greatly appreciate it if you could take a moment to leave us a review. Your feedback helps us improve our plugin and also lets other users know the value of our product. Thank you for taking the time to share your thoughts!"
+msgstr ""
+
+#: includes/admin/class-iat-review-notice.php:90
+msgid "Review"
+msgstr ""
+
+#: includes/admin/class-iat-review-notice.php:96
+msgid "Remind me later"
+msgstr ""
+
+#: includes/admin/class-iat-review-notice.php:102
+msgid "Do not show again"
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:44 includes/admin/class-iat-row-action.php:94 includes/admin/class-iat-row-action.php:145
+msgid "Invalid image ID."
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:50 includes/admin/class-iat-row-action.php:100
+msgid "Image not found."
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:59 includes/admin/class-iat-row-action.php:114
+msgid "Alt text already same."
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:67
+msgid "Alt text updated from title."
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:121
+msgid "Alt text updated from filename."
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:127
+msgid "Image URL not found."
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:148
+msgid "Alt text saved."
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:163
+msgid "Unauthorized"
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:172
+msgid "Invalid image ID"
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:178
+msgid "Same alt text already there"
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:186
+msgid "Alt text updated successfully"
+msgstr ""
+
+#: includes/admin/class-iat-row-action.php:189
+msgid "Failed to update alt text"
+msgstr ""
+
+#: views/admin/iat-bulk-action-view.php:12 views/admin/iat-get-pro-view.php:285
+msgid "Bulk Actions"
+msgstr ""
+
+#: views/admin/iat-bulk-action-view.php:16
+msgid "Bulk Actions allow you to add or update alt text for multiple images at once. Simply select the images you want to process by checking the checkboxes in the table below, choose your preferred action, and click Process. This feature is perfect for handling specific groups of images efficiently."
+msgstr ""
+
+#: views/admin/iat-bulk-action-view.php:26
+msgid "Choose Action..."
+msgstr ""
+
+#: views/admin/iat-bulk-action-view.php:37
+msgid "selected"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:12
+msgid "⭐ Premium Version"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:13
+msgid "Upgrade to Image Alt Text Pro"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:14
+msgid "Supercharge Your SEO with AI-Powered Alt Text Generation"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:18
+msgid "Get Pro: Generate Alt Text with AI in Seconds"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:23
+msgid "30-Day Money-Back Guarantee, no questions asked"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:29
+msgid "AI Powered"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:33
+msgid "SEO Optimized"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:37
+msgid "WCAG Compliant"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:41
+msgid "8,000+ Active Sites"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:45
+msgid "4 AI Providers"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:52
+msgid "Powerful Pro Features"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:53
+msgid "Everything you need to optimize your images for search engines and accessibility"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:61
+msgid "4 AI Vision Providers"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:62
+msgid "Generate accurate, SEO-friendly alt text using your choice of leading AI vision APIs. Bring your own key and pay only for what you use."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:64
+msgid "OpenAI GPT-4o"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:65
+msgid "Google Gemini 2.0 Flash"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:66
+msgid "Claude AI (Haiku) & Hugging Face"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:75
+msgid "SEO Validation System"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:76
+msgid "Comprehensive SEO checker with 100-point scoring system. Get real-time validation and actionable suggestions."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:78
+msgid "100-Point Scoring"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:79
+msgid "Instant Feedback"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:80
+msgid "Actionable Tips"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:89
+msgid "Auto-Add on Upload"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:90
+msgid "Automatically generate alt text the moment an image is uploaded. Choose from 6 methods including all AI providers."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:92
+msgid "6 Generation Methods"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:93
+msgid "Automatic Processing"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:94
+msgid "Skips Images With Existing Alt Text"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:103 views/admin/iat-get-pro-view.php:325
+msgid "One-Shot Bulk Actions"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:104
+msgid "Process ALL images with a single click. No selection needed - just choose an action and go!"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:106
+msgid "Process All at Once"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:107
+msgid "Progress Tracking"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:108
+msgid "Detailed Results"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:117 views/admin/iat-get-pro-view.php:330
+msgid "Send Image Context to AI"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:118
+msgid "Send the image filename and the attached post or page title to the AI, so alt text names the real venue, product, or location instead of guessing from the picture alone."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:120
+msgid "Filename + Post Title"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:121
+msgid "Context Strength: Strict, Balanced, SEO"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:122
+msgid "Guarantee Keywords"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:131
+msgid "AI Output Consistency"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:132
+msgid "Control how consistent or varied the AI is across runs, so your whole library reads in one uniform style instead of drifting from image to image."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:134
+msgid "Consistency Slider"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:135
+msgid "Applies to Every Provider"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:136
+msgid "Steady, Repeatable Output"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:145 views/admin/iat-get-pro-view.php:350
+msgid "Alt Text Prefix / Postfix"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:146
+msgid "Wrap a brand or product category around every alt text automatically. Set it once and every image comes out consistently branded and search friendly."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:148
+msgid "Brand Prefix + Category Postfix"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:149
+msgid "Independent Apply-to Toggles"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:150
+msgid "Live Preview"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:159
+msgid "Advanced Date Filters"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:160
+msgid "Filter images by custom date ranges with quick presets. Find exactly what you need, fast."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:162
+msgid "Custom Date Range"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:163
+msgid "Quick Presets"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:164
+msgid "Smart Search"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:173 views/admin/iat-get-pro-view.php:370
+msgid "Missing Alt Highlighter"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:174
+msgid "Visually identify images missing alt text on your frontend. Only visible to admins when logged in."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:176
+msgid "Visual Indicators"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:177
+msgid "Custom Color"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:178
+msgid "Admin Only"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:187
+msgid "Decorative Image Support"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:188
+msgid "Mark images as decorative and the plugin automatically injects the correct WCAG attributes on the frontend so screen readers skip them entirely."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:190
+msgid "role=\"presentation\" + aria-hidden=\"true\""
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:191
+msgid "Covers Gutenberg & PHP-rendered images"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:192
+msgid "Full WCAG 2.1 Compliance"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:201
+msgid "Bulk Caption Actions"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:202
+msgid "Copy post titles or filenames to image captions in bulk, a quick way to enrich your media library without editing each image individually."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:204
+msgid "Copy Title to Caption"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:205
+msgid "Copy Filename to Caption"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:206
+msgid "Bulk or Per-Image"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:214
+msgid "Up and Running in Minutes"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:215
+msgid "No complicated setup. No technical knowledge required."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:220
+msgid "Purchase Pro"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:221
+msgid "Choose your plan and complete checkout. You'll receive your license key instantly by email."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:227
+msgid "Install & Activate"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:228
+msgid "Upload the Pro plugin zip and activate it. Your existing settings and images carry over automatically."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:234
+msgid "Connect & Generate"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:235
+msgid "Add your AI API key in Settings and start generating accurate alt text for your entire media library."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:247
+msgid "No Per-Image Fees. Ever."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:248
+msgid "Bring your own API key and pay the AI provider directly at their standard rate, with no markups, no credits, and no surprise bills. OpenAI GPT-4o costs roughly $0.001 per image. Process 1,000 images for about $1."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:251
+msgid "Get Pro Now →"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:258
+msgid "Free vs Pro Comparison"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:263
+msgid "Feature"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:264
+msgid "Free"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:265
+msgid "Pro"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:270
+msgid "View Images With/Without Alt Text"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:290
+msgid "Search in Table"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:295
+msgid "OpenAI GPT-4o AI Generation"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:300
+msgid "Google Gemini AI Generation"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:305
+msgid "Claude AI Generation"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:310
+msgid "Hugging Face AI Generation"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:315
+msgid "SEO Validation & Scoring"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:320
+msgid "Auto-Add on Upload (6 Methods)"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:335
+msgid "Context Strength (Strict / Balanced / SEO)"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:340
+msgid "Guarantee Keywords in Alt Text"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:345
+msgid "AI Output Consistency Control"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:355
+msgid "Copy Title / Filename to Caption"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:360
+msgid "Decorative Image Accessibility (WCAG)"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:365
+msgid "Date Range Filters"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:375 views/admin/iat-get-pro-view.php:528 views/admin/iat-get-pro-view.php:551 views/admin/iat-get-pro-view.php:574
+msgid "Priority Support"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:386
+msgid "Loved by WordPress Users"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:391
+msgid "Showing %d most recent reviews from WordPress.org"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:501
+msgid "View All Reviews on WordPress.org"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:508
+msgid "Simple, Transparent Pricing"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:509
+msgid "Choose the plan that fits your needs"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:515
+msgid "Starter"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:522
+msgid "1 Site License"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:523 views/admin/iat-get-pro-view.php:546 views/admin/iat-get-pro-view.php:569
+msgid "4 AI Providers: Bring Your Own Key"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:524 views/admin/iat-get-pro-view.php:547 views/admin/iat-get-pro-view.php:570
+msgid "Auto-Generate Alt Text on Upload"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:525 views/admin/iat-get-pro-view.php:548 views/admin/iat-get-pro-view.php:571
+msgid "One-Shot Bulk Processing"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:526 views/admin/iat-get-pro-view.php:549 views/admin/iat-get-pro-view.php:572
+msgid "SEO Quality Score"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:527 views/admin/iat-get-pro-view.php:550 views/admin/iat-get-pro-view.php:573
+msgid "WCAG 2.1 Decorative Images"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:530 views/admin/iat-get-pro-view.php:553 views/admin/iat-get-pro-view.php:576
+msgid "Get Started"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:531 views/admin/iat-get-pro-view.php:554 views/admin/iat-get-pro-view.php:577
+msgid "30-Day Money-Back Guarantee"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:536
+msgid "Most Popular!"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:538
+msgid "Studio"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:545
+msgid "5 Sites License"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:559
+msgid "Best Value!"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:561
+msgid "Agency"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:568
+msgid "15 Sites License"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:584
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:587
+msgid "Do I need an API key to use Pro?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:588
+msgid "An API key is only required if you want AI-powered generation. All other Pro features (bulk actions, auto-add, date filters, decorative images, captions) work without one."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:591
+msgid "How much does AI generation actually cost?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:592
+msgid "You pay the AI provider directly at their standard rate. OpenAI GPT-4o costs roughly $0.001 per image, about $1 for 1,000 images. There are no markups or hidden fees from us."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:595
+msgid "Is my API key stored securely?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:596
+msgid "Yes. Your API key is stored in the WordPress database using standard wp_options, the same way WordPress stores all sensitive settings. It is never logged or exposed in the frontend."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:599
+msgid "Which AI provider gives the best results?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:600
+msgid "OpenAI GPT-4o and Google Gemini 2.0 Flash both deliver excellent SEO-friendly alt text. We recommend starting with Gemini, which has a generous free tier so you can test before spending anything."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:603
+msgid "Can I use Pro on multiple sites?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:604
+msgid "Yes. The Starter plan covers 1 site, Studio covers 5 sites, and Agency covers 15 sites. All plans include the full feature set; only the number of site activations differs."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:607
+msgid "Can the AI use my page content to write better alt text?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:608
+msgid "Yes. The Send Image Context to AI option passes the image filename and the attached post or page title into the AI request, so the alt text can name the real venue, product, or location instead of only describing what is visible. A context strength setting (Strict, Balanced, or SEO) controls how strongly those keywords are used, and it is off by default."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:611
+msgid "Can I add my brand to every image's alt text automatically?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:612
+msgid "Yes. The Alt Text Prefix / Postfix feature wraps a fixed brand name or product category before and after your alt text across your whole library, with no manual editing. You can apply it to copied titles, copied filenames, AI output, and auto-add on upload independently, and leaving the fields empty changes nothing."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:615
+msgid "What is your refund policy?"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:616
+msgid "We offer a 30-day money-back guarantee, no questions asked. If Pro does not work for your site for any reason, contact us within 30 days of purchase for a full refund."
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:623
+msgid "Stop Losing SEO Traffic to Missing Alt Text"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:624
+msgid "Trusted by 8,000+ WordPress sites. Pro unlocks the full power of AI"
+msgstr ""
+
+#: views/admin/iat-get-pro-view.php:628
+msgid "Get Pro Now - Starting at $14.99"
+msgstr ""
+
+#: views/admin/iat-header-view.php:7
+msgid "With Alt Text"
+msgstr ""
+
+#: views/admin/iat-header-view.php:15
+msgid "Image Alt Text dashboard"
+msgstr ""
+
+#: views/admin/iat-header-view.php:19
+msgid "Image Alt Text navigation"
+msgstr ""
+
+#: views/admin/iat-header-view.php:31
+msgid "Get Image Alt Text Pro"
+msgstr ""
+
+#: views/admin/iat-header-view.php:44
+msgid "Also from RS WebStudios"
+msgstr ""
+
+#: views/admin/iat-header-view.php:45
+msgid "Media Hygiene"
+msgstr ""
+
+#: views/admin/iat-header-view.php:46
+msgid "Remove unused media files"
+msgstr ""
+
+#: views/admin/iat-header-view.php:48
+msgid "Try Free →"
+msgstr ""
+
+#: views/admin/iat-list-view.php:40 views/admin/iat-list-view.php:43
+msgid "Alt text coverage"
+msgstr ""
+
+#: views/admin/iat-list-view.php:47
+msgid "with alt"
+msgstr ""
+
+#: views/admin/iat-list-view.php:48
+msgid "missing"
+msgstr ""
+
+#: views/admin/iat-list-view.php:49
+msgid "total images"
+msgstr ""
+
+#: views/admin/iat-list-view.php:54
+msgid "No images found in your media library yet."
+msgstr ""
+
+#: views/admin/iat-list-view.php:66
+msgid "Images With Alt Text"
+msgstr ""
+
+#: views/admin/iat-list-view.php:68
+msgid "Images Without Alt Text"
+msgstr ""
+
+#: views/admin/iat-list-view.php:91
+msgid "Select all"
+msgstr ""
+
+#: views/admin/iat-list-view.php:93
+msgid "Image"
+msgstr ""
+
+#: views/admin/iat-list-view.php:94
+msgid "Title"
+msgstr ""
+
+#: views/admin/iat-list-view.php:95
+msgid "URL"
+msgstr ""
+
+#: views/admin/iat-list-view.php:97
+msgid "Update Alt Text"
+msgstr ""
+
+#: views/admin/iat-list-view.php:99
+msgid "Add Alt Text"
+msgstr ""
+
+#: views/admin/iat-list-view.php:101
+msgid "Size"
+msgstr ""
+
+#: views/admin/iat-list-view.php:102
+msgid "Date"
+msgstr ""
+
+#: views/admin/iat-list-view.php:103
+msgid "Action"
+msgstr ""
+

@@ -34,7 +34,7 @@ if (!defined('ABSPATH')) {
                     <span class="iat-bulk-action-btn-text"><?php esc_html_e('Process', 'image-alt-text'); ?></span>
                 </button>
                 <div class="iat-bulk-action-selection-info">
-                    <span id="iat-bulk-action-selection-count">0</span>&nbsp;selected
+                    <span id="iat-bulk-action-selection-count">0</span>&nbsp;<?php esc_html_e('selected', 'image-alt-text'); ?>
                 </div>
             </div>
         </div>

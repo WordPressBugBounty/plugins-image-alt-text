@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-$current = isset($_GET['page']) ? sanitize_text_field($_GET['page']) : '';
+$current = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
 $tabs = array(
     'iat-with-alt-text'    => __('With Alt Text', 'image-alt-text'),
     'iat-without-alt-text' => __('Without Alt Text', 'image-alt-text'),
@@ -26,9 +26,9 @@ $plugin_version = defined('IAT_PLUGIN_VERSION') ? IAT_PLUGIN_VERSION : '';
                     </li>
                 <?php endforeach; ?>
                 <li class="iat-nav-item iat-nav-item-cta">
-                    <a href="<?php echo esc_url(admin_url('admin.php?page=iat-get-pro')); ?>" target="_blank" class="iat-nav-link iat-get-pro-btn <?php echo ($current === 'iat-get-pro') ? 'active' : ''; ?>">
+                    <a href="<?php echo esc_url(admin_url('admin.php?page=iat-get-pro')); ?>" class="iat-nav-link iat-get-pro-btn <?php echo ($current === 'iat-get-pro') ? 'active' : ''; ?>">
                         <span class="iat-get-pro-icon">⚡</span>
-                        <?php echo esc_html__('Get Pro', 'image-alt-text'); ?>
+                        <?php echo esc_html__('Get Image Alt Text Pro', 'image-alt-text'); ?>
                     </a>
                 </li>
             </ul>
@@ -38,11 +38,12 @@ $plugin_version = defined('IAT_PLUGIN_VERSION') ? IAT_PLUGIN_VERSION : '';
                 <span class="iat-plugin-version"><?php echo esc_html(sprintf('v%s', $plugin_version)); ?></span>
             <?php endif; ?>
         </div>
-        <a class="iat-media-hygiene-pill" href="https://wordpress.org/plugins/media-hygiene/" target="_blank">
+        <a class="iat-media-hygiene-pill" href="https://wordpress.org/plugins/media-hygiene/" target="_blank" rel="noopener noreferrer">
             <span class="iat-mh-icon dashicons dashicons-trash"></span>
             <span class="iat-mh-text">
+                <span class="iat-mh-eyebrow"><?php esc_html_e('Also from RS WebStudios', 'image-alt-text'); ?></span>
                 <strong><?php esc_html_e('Media Hygiene', 'image-alt-text'); ?></strong>
-                <span><?php esc_html_e('Remove unused media files', 'image-alt-text'); ?></span>
+                <span class="iat-mh-sub"><?php esc_html_e('Remove unused media files', 'image-alt-text'); ?></span>
             </span>
             <span class="iat-mh-cta"><?php esc_html_e('Try Free →', 'image-alt-text'); ?></span>
         </a>

@@ -33,7 +33,7 @@
             var $copiedMsg = $(this).closest('.iat-url').find('.iat-url-copied');
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(url).then(function () {
-                    $copiedMsg.text('URL copied!').fadeIn(200);
+                    $copiedMsg.text(iatObj.i18n.urlCopied).fadeIn(200);
                     setTimeout(() => $copiedMsg.fadeOut(400), 1200);
                 });
             } else {
@@ -42,7 +42,7 @@
                 tempInput.select();
                 document.execCommand('copy');
                 tempInput.remove();
-                $copiedMsg.text('URL copied!').fadeIn(200);
+                $copiedMsg.text(iatObj.i18n.urlCopied).fadeIn(200);
                 setTimeout(() => $copiedMsg.fadeOut(400), 1200);
             }
         });
@@ -86,6 +86,22 @@
             lengthChange: true,
             responsive: true,
             stateSave: true,
+            language: {
+                search: iatObj.i18n.dtSearch,
+                lengthMenu: iatObj.i18n.dtLengthMenu,
+                info: iatObj.i18n.dtInfo,
+                infoEmpty: iatObj.i18n.dtInfoEmpty,
+                infoFiltered: iatObj.i18n.dtInfoFiltered,
+                zeroRecords: iatObj.i18n.dtZeroRecords,
+                emptyTable: iatObj.i18n.dtEmptyTable,
+                processing: iatObj.i18n.dtProcessing,
+                paginate: {
+                    first: iatObj.i18n.dtPaginateFirst,
+                    last: iatObj.i18n.dtPaginateLast,
+                    next: iatObj.i18n.dtPaginateNext,
+                    previous: iatObj.i18n.dtPaginatePrevious
+                }
+            },
             ajax: {
                 type: 'POST',
                 url: iatObj.ajaxUrl,

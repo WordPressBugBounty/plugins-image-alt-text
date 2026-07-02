@@ -20,7 +20,7 @@
             $btn.hide();
 
             // Create and show processing message
-            var $processingMsg = $('<span class="iat-copy-processing"><span class="dashicons dashicons-update iat-spin"></span> Processing...</span>');
+            var $processingMsg = $('<span class="iat-copy-processing"><span class="dashicons dashicons-update iat-spin"></span> ' + iatObj.i18n.processing + '</span>');
             $btn.after($processingMsg);
 
             $altTextInput.val(title);
@@ -39,12 +39,12 @@
 
                     if (response.success && response.data) {
                         if (response.data.already_same) {
-                            $duplicateMsg.text(response.data.message || 'Alt text is already same.').fadeIn();
+                            $duplicateMsg.text(response.data.message || iatObj.i18n.alreadySame).fadeIn();
                             // Keep message visible, don't auto-hide
                             $btn.show();
                         } else {
                             $altTextDisplay.text(response.data.alt_text);
-                            $successMsg.text(response.data.message || 'Copied!').fadeIn();
+                            $successMsg.text(response.data.message || iatObj.i18n.copied).fadeIn();
                             // Keep message visible, don't auto-hide
                             $btn.show();
                         }
@@ -58,7 +58,7 @@
                             $container.find('.iat-reset-btn').hide();
                         }
                     } else {
-                        $successMsg.text((response.data && response.data.message) || 'Error saving!').fadeIn();
+                        $successMsg.text((response.data && response.data.message) || iatObj.i18n.errorSaving).fadeIn();
                         // Keep error message visible
                         $btn.show();
                     }
@@ -67,7 +67,7 @@
                     $processingMsg.remove();
                     //$successMsg.text('Server error!').fadeIn();
                     $successMsg
-                        .text('Network error - please try again')
+                        .text(iatObj.i18n.networkError)
                         .css({
                             background: '#fee2e2',
                             color: '#dc2626',
@@ -98,7 +98,7 @@
             $btn.hide();
 
             // Create and show processing message
-            var $processingMsg = $('<span class="iat-copy-processing"><span class="dashicons dashicons-update iat-spin"></span> Processing...</span>');
+            var $processingMsg = $('<span class="iat-copy-processing"><span class="dashicons dashicons-update iat-spin"></span> ' + iatObj.i18n.processing + '</span>');
             $btn.after($processingMsg);
 
             $altTextInput.val(filename);
@@ -116,12 +116,12 @@
 
                     if (response.success && response.data) {
                         if (response.data.already_same) {
-                            $duplicateMsg.text(response.data.message || 'Alt text is already same.').fadeIn();
+                            $duplicateMsg.text(response.data.message || iatObj.i18n.alreadySame).fadeIn();
                             // Keep message visible, don't auto-hide
                             $btn.show();
                         } else {
                             $altTextDisplay.text(response.data.alt_text);
-                            $successMsg.text(response.data.message || 'Added!').fadeIn();
+                            $successMsg.text(response.data.message || iatObj.i18n.added).fadeIn();
                             // Keep message visible, don't auto-hide
                             $btn.show();
                         }
@@ -135,7 +135,7 @@
                             $container.find('.iat-reset-btn').hide();
                         }
                     } else {
-                        $successMsg.text((response.data && response.data.message) || 'Error saving!').fadeIn();
+                        $successMsg.text((response.data && response.data.message) || iatObj.i18n.errorSaving).fadeIn();
                         // Keep error message visible
                         $btn.show();
                     }
@@ -144,7 +144,7 @@
                     $processingMsg.remove();
                     // $successMsg.text('Server error!').fadeIn();
                     $successMsg
-                        .text('Network error - please try again')
+                        .text(iatObj.i18n.networkError)
                         .css({
                             background: '#fee2e2',
                             color: '#dc2626',
@@ -194,7 +194,7 @@
             if (button.prop('disabled') || button.hasClass('saving')) return;
             container.removeClass('has-changes').addClass('saving');
             button.addClass('saving').find('.dashicons').removeClass('dashicons-yes-alt').addClass('dashicons-update');
-            statusText.removeClass().addClass('iat-status-text info').text('Saving...').show();
+            statusText.removeClass().addClass('iat-status-text info').text(iatObj.i18n.saving).show();
             $.ajax({
                 url: iatObj.ajaxUrl,
                 type: 'POST',
@@ -210,19 +210,19 @@
                         input.data('original', altText);
                         button.prop('disabled', true);
                         container.find('.iat-reset-btn').hide();
-                        statusText.removeClass().addClass('iat-status-text success').text(response.data.message || 'Alt text saved successfully').show();
+                        statusText.removeClass().addClass('iat-status-text success').text(response.data.message || iatObj.i18n.saved).show();
                     } else if (response.data && response.data.type === 'duplicate') {
                         container.removeClass('saving').addClass('has-changes');
-                        statusText.removeClass().addClass('iat-status-text warning').text(response.data.message || 'This alt text is already set').show();
+                        statusText.removeClass().addClass('iat-status-text warning').text(response.data.message || iatObj.i18n.duplicateAlt).show();
                     } else {
                         container.removeClass('saving').addClass('has-changes');
-                        statusText.removeClass().addClass('iat-status-text error').text((response.data && response.data.message) || 'Failed to save. Please try again.').show();
+                        statusText.removeClass().addClass('iat-status-text error').text((response.data && response.data.message) || iatObj.i18n.failedSave).show();
                     }
                     button.removeClass('saving').find('.dashicons').removeClass('dashicons-update').addClass('dashicons-yes-alt');
                 },
                 error: function () {
                     container.removeClass('saving').addClass('has-changes');
-                    statusText.removeClass().addClass('iat-status-text error').text('Network error. Please check your connection.').show();
+                    statusText.removeClass().addClass('iat-status-text error').text(iatObj.i18n.networkErrorConn).show();
                     button.removeClass('saving').find('.dashicons').removeClass('dashicons-update').addClass('dashicons-yes-alt');
                 }
             });

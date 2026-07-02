@@ -56,7 +56,7 @@ class Iat_Admin_Menu
 
     public function iat_highlight_menu_css()
     {
-        $current_page = isset($_GET['page']) ? sanitize_text_field($_GET['page']) : '';
+        $current_page = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
 
         $plugin_pages = array(
             'iat-with-alt-text',
@@ -113,6 +113,10 @@ class Iat_Admin_Menu
         }
 
         // css
+        // WordPress Dashicons: the plugin UI uses dashicons-* glyphs throughout. Enqueue it
+        // explicitly instead of assuming another component already loaded it, so icons render
+        // even when an optimizer strips "unused" core styles.
+        wp_enqueue_style('dashicons');
         wp_enqueue_style('iat-bootstrap', IAT_PLUGIN_URL . 'assets/css/bootstrap.min.css', [], IAT_FILE_VERSION);
         wp_enqueue_style('iat-datatables', IAT_PLUGIN_URL . 'assets/css/datatables.min.css', [], IAT_FILE_VERSION);
         wp_enqueue_style('iat-datatables-responsive', IAT_PLUGIN_URL . 'assets/css/responsive.dataTables.min.css', [], IAT_FILE_VERSION);
@@ -153,6 +157,55 @@ class Iat_Admin_Menu
             'pluginUrl' => IAT_PLUGIN_URL,
             'currentPage' => isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '',
             'pluginLogo' =>  esc_url_raw(IAT_PLUGIN_URL . 'assets/images/image-alt-text-logo.png'),
+            // Translatable strings used by the JS (so they reach translate.wordpress.org).
+            'i18n' => array(
+                // Generic row / list feedback
+                'urlCopied'        => __('URL copied!', 'image-alt-text'),
+                'processing'       => __('Processing...', 'image-alt-text'),
+                'copied'           => __('Copied!', 'image-alt-text'),
+                'added'            => __('Added!', 'image-alt-text'),
+                'alreadySame'      => __('Alt text is already same.', 'image-alt-text'),
+                'errorSaving'      => __('Error saving!', 'image-alt-text'),
+                'saving'           => __('Saving...', 'image-alt-text'),
+                'saved'            => __('Alt text saved successfully', 'image-alt-text'),
+                'duplicateAlt'     => __('This alt text is already set', 'image-alt-text'),
+                'failedSave'       => __('Failed to save. Please try again.', 'image-alt-text'),
+                'networkError'     => __('Network error - please try again', 'image-alt-text'),
+                'networkErrorConn' => __('Network error. Please check your connection.', 'image-alt-text'),
+                // Bulk actions
+                'chooseAction'        => __('Choose action...', 'image-alt-text'),
+                'selectActionFirst'   => __('Please select an action first.', 'image-alt-text'),
+                'selectAtLeastOne'    => __('Please select at least one image to process.', 'image-alt-text'),
+                'actionCopyTitle'     => __('Copy Title to Alt Text', 'image-alt-text'),
+                'actionCopyFilename'  => __('Copy Filename to Alt Text', 'image-alt-text'),
+                'noticeNoTitleSkip'   => __('Images without a title will be skipped.', 'image-alt-text'),
+                'noticeTitleSameSkip' => __('Images where the alt text already matches the title will be skipped.', 'image-alt-text'),
+                'noticeNoUrlSkip'     => __('Images where the URL is not found will be skipped.', 'image-alt-text'),
+                'noticeFileSameSkip'  => __('Images where the alt text already matches the filename will be skipped.', 'image-alt-text'),
+                'confirmBulkTitle'    => __('Confirm Bulk Action', 'image-alt-text'),
+                /* translators: %1$s: action name, %2$d: number of images */
+                'confirmBulkFor'      => __('%1$s for %2$d image(s)', 'image-alt-text'),
+                'confirmYes'          => __('Yes, process it!', 'image-alt-text'),
+                'cancel'              => __('Cancel', 'image-alt-text'),
+                'process'             => __('Process', 'image-alt-text'),
+                'bulkSuccess'         => __('Bulk action completed successfully!', 'image-alt-text'),
+                'processingFailed'    => __('Processing failed', 'image-alt-text'),
+                /* translators: %s: error message */
+                'bulkError'           => __('Error: %s', 'image-alt-text'),
+                // DataTables UI
+                'dtSearch'           => __('Search:', 'image-alt-text'),
+                'dtLengthMenu'       => __('Show _MENU_ entries', 'image-alt-text'),
+                'dtInfo'             => __('Showing _START_ to _END_ of _TOTAL_ entries', 'image-alt-text'),
+                'dtInfoEmpty'        => __('Showing 0 to 0 of 0 entries', 'image-alt-text'),
+                'dtInfoFiltered'     => __('(filtered from _MAX_ total entries)', 'image-alt-text'),
+                'dtZeroRecords'      => __('No matching images found', 'image-alt-text'),
+                'dtEmptyTable'       => __('No images found', 'image-alt-text'),
+                'dtProcessing'       => __('Processing...', 'image-alt-text'),
+                'dtPaginateFirst'    => __('First', 'image-alt-text'),
+                'dtPaginateLast'     => __('Last', 'image-alt-text'),
+                'dtPaginateNext'     => __('Next', 'image-alt-text'),
+                'dtPaginatePrevious' => __('Previous', 'image-alt-text'),
+            ),
         );
 
         wp_localize_script('iat-admin-list', 'iatObj', $localize_data);
@@ -189,7 +242,7 @@ class Iat_Admin_Menu
         $reviews_handler = new Iat_Reviews();
 
         // Clear cache if requested (for testing) - with nonce verification
-        if (isset($_GET['clear_review_cache']) && $_GET['clear_review_cache'] === '1') {
+        if (isset($_GET['clear_review_cache']) && sanitize_text_field(wp_unslash($_GET['clear_review_cache'])) === '1') {
             // Verify nonce for security
             if (isset($_GET['_wpnonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'clear_review_cache')) {
                 $reviews_handler->clear_cache();

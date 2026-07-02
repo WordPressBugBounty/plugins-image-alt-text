@@ -288,46 +288,49 @@ class Iat_Reviews
      */
     private function get_fallback_reviews()
     {
+        // Real 5-star reviews from wordpress.org/support/plugin/image-alt-text/reviews/.
+        // Hardcoded on purpose: this is a static array shown only until the live
+        // WordPress.org cache populates, so it adds no HTTP requests of its own.
         return array(
             array(
-                'author' => 'WordPress User',
+                'author' => 'nealumphred',
                 'rating' => 5,
-                'content' => 'Great plugin for managing alt text! Very helpful for SEO and accessibility.',
+                'content' => 'The Image Alt Text plugin is easy to install, easy to get running, and easy to understand. I used it to add alt text in bulk to thousands of images in a matter of minutes for each site.',
                 'date' => '',
-                'title' => 'Excellent Plugin',
-                'avatar' => $this->generate_gravatar_url('WordPress User')
+                'title' => 'Thanks for a nifty plugin!',
+                'avatar' => $this->generate_gravatar_url('nealumphred')
             ),
             array(
-                'author' => 'Site Owner',
+                'author' => 'hiteshgoti',
                 'rating' => 5,
-                'content' => 'Easy to use and saves time. The bulk actions feature is very useful.',
+                'content' => 'I\'ve been managing WordPress websites with thousands of images, and updating alt text manually was always a tedious task. This plugin made the process incredibly simple.',
                 'date' => '',
-                'title' => 'Time Saver',
-                'avatar' => $this->generate_gravatar_url('Site Owner')
+                'title' => 'Excellent Time-Saver for Image SEO',
+                'avatar' => $this->generate_gravatar_url('hiteshgoti')
             ),
             array(
-                'author' => 'Developer',
+                'author' => 'hnipa2110',
                 'rating' => 5,
-                'content' => 'Simple and effective. Does exactly what it says.',
+                'content' => 'After I uploaded alternative texts for over a hundred products, I realized I couldn\'t keep doing it that way. Then I found this plugin, and with just one click, all the uploads were completed.',
                 'date' => '',
-                'title' => 'Works Perfectly',
-                'avatar' => $this->generate_gravatar_url('Developer')
+                'title' => 'This is a very convenient plugin.',
+                'avatar' => $this->generate_gravatar_url('hnipa2110')
             ),
             array(
-                'author' => 'Blogger',
+                'author' => 'tselenkor',
                 'rating' => 5,
-                'content' => 'Helped improve my site accessibility and SEO rankings significantly.',
+                'content' => 'I had a lot of empty alt text to fill in for a checking system, and this plugin helped me automatically paste alt text from the heading. Thanks devs!',
                 'date' => '',
-                'title' => 'SEO Boost',
-                'avatar' => $this->generate_gravatar_url('Blogger')
+                'title' => 'Good stuff',
+                'avatar' => $this->generate_gravatar_url('tselenkor')
             ),
             array(
-                'author' => 'Agency Owner',
+                'author' => 'ddgonzo0001',
                 'rating' => 5,
-                'content' => 'Perfect for managing multiple client sites. Highly recommended!',
+                'content' => 'Very helpful to edit alt tags quickly, or just transfer the image names to alt tags.',
                 'date' => '',
-                'title' => 'Great for Agencies',
-                'avatar' => $this->generate_gravatar_url('Agency Owner')
+                'title' => 'Excellent!',
+                'avatar' => $this->generate_gravatar_url('ddgonzo0001')
             )
         );
     }
@@ -449,3 +452,9 @@ class Iat_Reviews
         return date_i18n('F Y', $timestamp);
     }
 }
+
+// Register the background cache-refresh hook on every request. WP-Cron runs in a
+// separate request where the Get Pro page is never rendered, so without a global
+// instance here the scheduled event would fire with no callback and the reviews
+// cache would never populate (leaving only the fallback reviews on screen).
+new Iat_Reviews();

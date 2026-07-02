@@ -15,12 +15,12 @@ if (!defined('ABSPATH')) {
             <div class="iat-pro-hero-buttons">
                 <a href="<?php echo esc_url('https://imagealttext.in/pricing/?utm_source=image_alt_text_plugin&utm_medium=plugin&utm_campaign=get_pro&utm_content=hero_button'); ?>" target="_blank" class="iat-btn-primary iat-btn-large">
                     <span class="dashicons dashicons-cart"></span>
-                    <?php esc_html_e('Get Pro — Generate Alt Text with AI in Seconds', 'image-alt-text'); ?>
+                    <?php esc_html_e('Get Pro: Generate Alt Text with AI in Seconds', 'image-alt-text'); ?>
                 </a>
             </div>
             <p class="iat-hero-guarantee">
                 <span class="dashicons dashicons-shield-alt"></span>
-                <?php esc_html_e('30-Day Money-Back Guarantee — No questions asked', 'image-alt-text'); ?>
+                <?php esc_html_e('30-Day Money-Back Guarantee, no questions asked', 'image-alt-text'); ?>
             </p>
         </div>
         <div class="iat-pro-hero-image">
@@ -109,6 +109,48 @@ if (!defined('ABSPATH')) {
                 </ul>
             </div>
 
+            <!-- Feature: Send Image Context to AI -->
+            <div class="iat-feature-card">
+                <div class="iat-feature-icon iat-icon-ai">
+                    <span class="dashicons dashicons-admin-page"></span>
+                </div>
+                <h3><?php esc_html_e('Send Image Context to AI', 'image-alt-text'); ?></h3>
+                <p><?php esc_html_e('Send the image filename and the attached post or page title to the AI, so alt text names the real venue, product, or location instead of guessing from the picture alone.', 'image-alt-text'); ?></p>
+                <ul class="iat-feature-list">
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Filename + Post Title', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Context Strength: Strict, Balanced, SEO', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Guarantee Keywords', 'image-alt-text'); ?></li>
+                </ul>
+            </div>
+
+            <!-- Feature: AI Output Consistency -->
+            <div class="iat-feature-card">
+                <div class="iat-feature-icon iat-icon-auto">
+                    <span class="dashicons dashicons-randomize"></span>
+                </div>
+                <h3><?php esc_html_e('AI Output Consistency', 'image-alt-text'); ?></h3>
+                <p><?php esc_html_e('Control how consistent or varied the AI is across runs, so your whole library reads in one uniform style instead of drifting from image to image.', 'image-alt-text'); ?></p>
+                <ul class="iat-feature-list">
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Consistency Slider', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Applies to Every Provider', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Steady, Repeatable Output', 'image-alt-text'); ?></li>
+                </ul>
+            </div>
+
+            <!-- Feature: Alt Text Prefix / Postfix -->
+            <div class="iat-feature-card">
+                <div class="iat-feature-icon iat-icon-bulk">
+                    <span class="dashicons dashicons-tag"></span>
+                </div>
+                <h3><?php esc_html_e('Alt Text Prefix / Postfix', 'image-alt-text'); ?></h3>
+                <p><?php esc_html_e('Wrap a brand or product category around every alt text automatically. Set it once and every image comes out consistently branded and search friendly.', 'image-alt-text'); ?></p>
+                <ul class="iat-feature-list">
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Brand Prefix + Category Postfix', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Independent Apply-to Toggles', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Live Preview', 'image-alt-text'); ?></li>
+                </ul>
+            </div>
+
             <!-- Feature 5: Advanced Filters -->
             <div class="iat-feature-card">
                 <div class="iat-feature-icon iat-icon-filter">
@@ -157,7 +199,7 @@ if (!defined('ABSPATH')) {
                     <span class="dashicons dashicons-editor-quote"></span>
                 </div>
                 <h3><?php esc_html_e('Bulk Caption Actions', 'image-alt-text'); ?></h3>
-                <p><?php esc_html_e('Copy post titles or filenames to image captions in bulk — a quick way to enrich your media library without editing each image individually.', 'image-alt-text'); ?></p>
+                <p><?php esc_html_e('Copy post titles or filenames to image captions in bulk, a quick way to enrich your media library without editing each image individually.', 'image-alt-text'); ?></p>
                 <ul class="iat-feature-list">
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Copy Title to Caption', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Copy Filename to Caption', 'image-alt-text'); ?></li>
@@ -203,7 +245,7 @@ if (!defined('ABSPATH')) {
             </div>
             <div class="iat-no-fee-content">
                 <h3><?php esc_html_e('No Per-Image Fees. Ever.', 'image-alt-text'); ?></h3>
-                <p><?php esc_html_e('Bring your own API key and pay the AI provider directly at their standard rate — no markups, no credits, no surprise bills. OpenAI GPT-4o costs roughly $0.001 per image. Process 1,000 images for about $1.', 'image-alt-text'); ?></p>
+                <p><?php esc_html_e('Bring your own API key and pay the AI provider directly at their standard rate, with no markups, no credits, and no surprise bills. OpenAI GPT-4o costs roughly $0.001 per image. Process 1,000 images for about $1.', 'image-alt-text'); ?></p>
             </div>
             <a href="<?php echo esc_url('https://imagealttext.in/pricing/?utm_source=image_alt_text_plugin&utm_medium=plugin&utm_campaign=get_pro&utm_content=no_fee_banner'); ?>" target="_blank" class="iat-btn-no-fee">
                 <?php esc_html_e('Get Pro Now →', 'image-alt-text'); ?>
@@ -285,6 +327,31 @@ if (!defined('ABSPATH')) {
                         <td><span class="dashicons dashicons-yes iat-green"></span></td>
                     </tr>
                     <tr class="iat-highlight-row">
+                        <td><strong><?php esc_html_e('Send Image Context to AI', 'image-alt-text'); ?></strong></td>
+                        <td><span class="dashicons dashicons-no-alt"></span></td>
+                        <td><span class="dashicons dashicons-yes iat-green"></span></td>
+                    </tr>
+                    <tr class="iat-highlight-row">
+                        <td><strong><?php esc_html_e('Context Strength (Strict / Balanced / SEO)', 'image-alt-text'); ?></strong></td>
+                        <td><span class="dashicons dashicons-no-alt"></span></td>
+                        <td><span class="dashicons dashicons-yes iat-green"></span></td>
+                    </tr>
+                    <tr class="iat-highlight-row">
+                        <td><strong><?php esc_html_e('Guarantee Keywords in Alt Text', 'image-alt-text'); ?></strong></td>
+                        <td><span class="dashicons dashicons-no-alt"></span></td>
+                        <td><span class="dashicons dashicons-yes iat-green"></span></td>
+                    </tr>
+                    <tr class="iat-highlight-row">
+                        <td><strong><?php esc_html_e('AI Output Consistency Control', 'image-alt-text'); ?></strong></td>
+                        <td><span class="dashicons dashicons-no-alt"></span></td>
+                        <td><span class="dashicons dashicons-yes iat-green"></span></td>
+                    </tr>
+                    <tr class="iat-highlight-row">
+                        <td><strong><?php esc_html_e('Alt Text Prefix / Postfix', 'image-alt-text'); ?></strong></td>
+                        <td><span class="dashicons dashicons-no-alt"></span></td>
+                        <td><span class="dashicons dashicons-yes iat-green"></span></td>
+                    </tr>
+                    <tr class="iat-highlight-row">
                         <td><strong><?php esc_html_e('Copy Title / Filename to Caption', 'image-alt-text'); ?></strong></td>
                         <td><span class="dashicons dashicons-no-alt"></span></td>
                         <td><span class="dashicons dashicons-yes iat-green"></span></td>
@@ -336,13 +403,14 @@ if (!defined('ABSPATH')) {
                     <?php
                     if (!empty($reviews) && is_array($reviews)) {
                         foreach ($reviews as $review) {
+                            // Assign raw here; each value is escaped once at its point of output below.
                             $rating = isset($review['rating']) ? intval($review['rating']) : 5;
                             $stars = str_repeat('⭐', $rating);
-                            $author = isset($review['author']) ? esc_html($review['author']) : 'WordPress User';
-                            $title = isset($review['title']) && !empty($review['title']) ? esc_html($review['title']) : '';
-                            $content = isset($review['content']) ? esc_html($review['content']) : '';
-                            $date = isset($review['date']) && !empty($review['date']) ? esc_html($review['date']) : '';
-                            $avatar = isset($review['avatar']) && !empty($review['avatar']) ? esc_url($review['avatar']) : '';
+                            $author = isset($review['author']) ? $review['author'] : 'WordPress User';
+                            $title = isset($review['title']) && !empty($review['title']) ? $review['title'] : '';
+                            $content = isset($review['content']) ? $review['content'] : '';
+                            $date = isset($review['date']) && !empty($review['date']) ? $review['date'] : '';
+                            $avatar = isset($review['avatar']) && !empty($review['avatar']) ? $review['avatar'] : '';
                     ?>
                             <div class="iat-testimonial">
                                 <div class="iat-testimonial-header">
@@ -380,12 +448,12 @@ if (!defined('ABSPATH')) {
                                 <div class="iat-testimonial-stars"><?php echo esc_html('⭐⭐⭐⭐⭐'); ?></div>
                                 <div class="iat-testimonial-rating-text"><?php echo esc_html('5'); ?>/<?php echo esc_html('5'); ?></div>
                             </div>
-                            <h4 class="iat-testimonial-title"><?php esc_html_e('Excellent Plugin', 'image-alt-text'); ?></h4>
-                            <p class="iat-testimonial-content"><?php esc_html_e('"Great plugin for managing alt text! Very helpful for SEO and accessibility."', 'image-alt-text'); ?></p>
+                            <h4 class="iat-testimonial-title"><?php echo esc_html('Thanks for a nifty plugin!'); ?></h4>
+                            <p class="iat-testimonial-content"><?php echo esc_html('"The Image Alt Text plugin is easy to install, easy to get running, and easy to understand."'); ?></p>
                             <div class="iat-testimonial-footer">
                                 <div class="iat-testimonial-author">
                                     <div class="iat-author-avatar"><span class="dashicons dashicons-admin-users"></span></div>
-                                    <div class="iat-author-info"><strong class="iat-author-name"><?php esc_html_e('WordPress User', 'image-alt-text'); ?></strong></div>
+                                    <div class="iat-author-info"><strong class="iat-author-name"><?php echo esc_html('nealumphred'); ?></strong></div>
                                 </div>
                             </div>
                         </div>
@@ -394,12 +462,12 @@ if (!defined('ABSPATH')) {
                                 <div class="iat-testimonial-stars"><?php echo esc_html('⭐⭐⭐⭐⭐'); ?></div>
                                 <div class="iat-testimonial-rating-text"><?php echo esc_html('5'); ?>/<?php echo esc_html('5'); ?></div>
                             </div>
-                            <h4 class="iat-testimonial-title"><?php esc_html_e('Time Saver', 'image-alt-text'); ?></h4>
-                            <p class="iat-testimonial-content"><?php esc_html_e('"Easy to use and saves time. The bulk actions feature is very useful."', 'image-alt-text'); ?></p>
+                            <h4 class="iat-testimonial-title"><?php echo esc_html('Excellent Time-Saver for Image SEO'); ?></h4>
+                            <p class="iat-testimonial-content"><?php echo esc_html('"Updating alt text manually was always a tedious task. This plugin made the process incredibly simple."'); ?></p>
                             <div class="iat-testimonial-footer">
                                 <div class="iat-testimonial-author">
                                     <div class="iat-author-avatar"><span class="dashicons dashicons-admin-users"></span></div>
-                                    <div class="iat-author-info"><strong class="iat-author-name"><?php esc_html_e('Site Owner', 'image-alt-text'); ?></strong></div>
+                                    <div class="iat-author-info"><strong class="iat-author-name"><?php echo esc_html('hiteshgoti'); ?></strong></div>
                                 </div>
                             </div>
                         </div>
@@ -408,12 +476,12 @@ if (!defined('ABSPATH')) {
                                 <div class="iat-testimonial-stars"><?php echo esc_html('⭐⭐⭐⭐⭐'); ?></div>
                                 <div class="iat-testimonial-rating-text"><?php echo esc_html('5'); ?>/<?php echo esc_html('5'); ?></div>
                             </div>
-                            <h4 class="iat-testimonial-title"><?php esc_html_e('Works Perfectly', 'image-alt-text'); ?></h4>
-                            <p class="iat-testimonial-content"><?php esc_html_e('"Simple and effective. Does exactly what it says."', 'image-alt-text'); ?></p>
+                            <h4 class="iat-testimonial-title"><?php echo esc_html('This is a very convenient plugin.'); ?></h4>
+                            <p class="iat-testimonial-content"><?php echo esc_html('"After uploading alt text for over a hundred products, I found this plugin, and with just one click all the uploads were completed."'); ?></p>
                             <div class="iat-testimonial-footer">
                                 <div class="iat-testimonial-author">
                                     <div class="iat-author-avatar"><span class="dashicons dashicons-admin-users"></span></div>
-                                    <div class="iat-author-info"><strong class="iat-author-name"><?php esc_html_e('Developer', 'image-alt-text'); ?></strong></div>
+                                    <div class="iat-author-info"><strong class="iat-author-name"><?php echo esc_html('hnipa2110'); ?></strong></div>
                                 </div>
                             </div>
                         </div>
@@ -453,7 +521,7 @@ if (!defined('ABSPATH')) {
                 </div>
                 <ul class="iat-pricing-features">
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('1 Site License', 'image-alt-text'); ?></li>
-                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('4 AI Providers — Bring Your Own Key', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('4 AI Providers: Bring Your Own Key', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Auto-Generate Alt Text on Upload', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('One-Shot Bulk Processing', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('SEO Quality Score', 'image-alt-text'); ?></li>
@@ -476,7 +544,7 @@ if (!defined('ABSPATH')) {
                 </div>
                 <ul class="iat-pricing-features">
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('5 Sites License', 'image-alt-text'); ?></li>
-                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('4 AI Providers — Bring Your Own Key', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('4 AI Providers: Bring Your Own Key', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Auto-Generate Alt Text on Upload', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('One-Shot Bulk Processing', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('SEO Quality Score', 'image-alt-text'); ?></li>
@@ -499,7 +567,7 @@ if (!defined('ABSPATH')) {
                 </div>
                 <ul class="iat-pricing-features">
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('15 Sites License', 'image-alt-text'); ?></li>
-                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('4 AI Providers — Bring Your Own Key', 'image-alt-text'); ?></li>
+                    <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('4 AI Providers: Bring Your Own Key', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('Auto-Generate Alt Text on Upload', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('One-Shot Bulk Processing', 'image-alt-text'); ?></li>
                     <li><span class="dashicons dashicons-yes"></span> <?php esc_html_e('SEO Quality Score', 'image-alt-text'); ?></li>
@@ -522,7 +590,7 @@ if (!defined('ABSPATH')) {
             </div>
             <div class="iat-faq-item">
                 <h4><?php esc_html_e('How much does AI generation actually cost?', 'image-alt-text'); ?></h4>
-                <p><?php esc_html_e('You pay the AI provider directly at their standard rate. OpenAI GPT-4o costs roughly $0.001 per image — about $1 for 1,000 images. There are no markups or hidden fees from us.', 'image-alt-text'); ?></p>
+                <p><?php esc_html_e('You pay the AI provider directly at their standard rate. OpenAI GPT-4o costs roughly $0.001 per image, about $1 for 1,000 images. There are no markups or hidden fees from us.', 'image-alt-text'); ?></p>
             </div>
             <div class="iat-faq-item">
                 <h4><?php esc_html_e('Is my API key stored securely?', 'image-alt-text'); ?></h4>
@@ -530,11 +598,19 @@ if (!defined('ABSPATH')) {
             </div>
             <div class="iat-faq-item">
                 <h4><?php esc_html_e('Which AI provider gives the best results?', 'image-alt-text'); ?></h4>
-                <p><?php esc_html_e('OpenAI GPT-4o and Google Gemini 2.0 Flash both deliver excellent SEO-friendly alt text. We recommend starting with Gemini — it has a generous free tier so you can test before spending anything.', 'image-alt-text'); ?></p>
+                <p><?php esc_html_e('OpenAI GPT-4o and Google Gemini 2.0 Flash both deliver excellent SEO-friendly alt text. We recommend starting with Gemini, which has a generous free tier so you can test before spending anything.', 'image-alt-text'); ?></p>
             </div>
             <div class="iat-faq-item">
                 <h4><?php esc_html_e('Can I use Pro on multiple sites?', 'image-alt-text'); ?></h4>
-                <p><?php esc_html_e('Yes. The Starter plan covers 1 site, Studio covers 5 sites, and Agency covers 15 sites. All plans include the full feature set — only the number of site activations differs.', 'image-alt-text'); ?></p>
+                <p><?php esc_html_e('Yes. The Starter plan covers 1 site, Studio covers 5 sites, and Agency covers 15 sites. All plans include the full feature set; only the number of site activations differs.', 'image-alt-text'); ?></p>
+            </div>
+            <div class="iat-faq-item">
+                <h4><?php esc_html_e('Can the AI use my page content to write better alt text?', 'image-alt-text'); ?></h4>
+                <p><?php esc_html_e('Yes. The Send Image Context to AI option passes the image filename and the attached post or page title into the AI request, so the alt text can name the real venue, product, or location instead of only describing what is visible. A context strength setting (Strict, Balanced, or SEO) controls how strongly those keywords are used, and it is off by default.', 'image-alt-text'); ?></p>
+            </div>
+            <div class="iat-faq-item">
+                <h4><?php esc_html_e('Can I add my brand to every image\'s alt text automatically?', 'image-alt-text'); ?></h4>
+                <p><?php esc_html_e('Yes. The Alt Text Prefix / Postfix feature wraps a fixed brand name or product category before and after your alt text across your whole library, with no manual editing. You can apply it to copied titles, copied filenames, AI output, and auto-add on upload independently, and leaving the fields empty changes nothing.', 'image-alt-text'); ?></p>
             </div>
             <div class="iat-faq-item">
                 <h4><?php esc_html_e('What is your refund policy?', 'image-alt-text'); ?></h4>
@@ -546,7 +622,7 @@ if (!defined('ABSPATH')) {
     <!-- CTA Section -->
     <div class="iat-cta-section">
         <h2><?php esc_html_e('Stop Losing SEO Traffic to Missing Alt Text', 'image-alt-text'); ?></h2>
-        <p><?php esc_html_e('Trusted by 8,000+ WordPress sites — Pro unlocks the full power of AI', 'image-alt-text'); ?></p>
+        <p><?php esc_html_e('Trusted by 8,000+ WordPress sites. Pro unlocks the full power of AI', 'image-alt-text'); ?></p>
         <div class="iat-cta-buttons">
             <a href="<?php echo esc_url('https://imagealttext.in/pricing/?utm_source=image_alt_text_plugin&utm_medium=plugin&utm_campaign=get_pro&utm_content=pricing_page'); ?>" target="_blank" class="iat-btn-cta-primary">
                 <span class="dashicons dashicons-cart"></span>

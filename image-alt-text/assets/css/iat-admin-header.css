@@ -232,7 +232,15 @@
     color: #ffffff;
 }
 
-.iat-mh-text span {
+.iat-mh-eyebrow {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.iat-mh-text .iat-mh-sub {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.85);
 }
@@ -272,7 +280,7 @@
         max-width: 150px;
     }
 
-    .iat-mh-text span {
+    .iat-mh-text .iat-mh-sub {
         display: none;
     }
 }
@@ -293,7 +301,7 @@
         display: none;
     }
 
-    .iat-mh-text span {
+    .iat-mh-text .iat-mh-sub {
         display: none;
     }
 }

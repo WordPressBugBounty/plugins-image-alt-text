@@ -114,9 +114,12 @@ class Iat_Bulk_Action
                 continue;
             }
 
-            // Check if alt text already matches title
+            // Clean the title into readable alt text (strips -/_ separators, fixes casing).
+            $clean_title = iat_clean_title_for_alt($title);
+
+            // Check if alt text already matches the cleaned title
             $current_alt = get_post_meta($post_id, '_wp_attachment_image_alt', true);
-            if ($current_alt === $title) {
+            if ($current_alt === $clean_title) {
                 $already_same_count++;
                 $skipped_count++;
                 $detailed_results[] = array(
@@ -131,7 +134,7 @@ class Iat_Bulk_Action
             }
 
             // Update alt text
-            $result = update_post_meta($post_id, '_wp_attachment_image_alt', $title);
+            $result = update_post_meta($post_id, '_wp_attachment_image_alt', $clean_title);
             if ($result !== false) {
                 $updated_count++;
                 $detailed_results[] = array(
@@ -140,7 +143,7 @@ class Iat_Bulk_Action
                     'status' => 'updated',
                     'reason' => 'Title copied to alt text successfully',
                     'old_alt' => $current_alt,
-                    'new_alt' => $title,
+                    'new_alt' => $clean_title,
                     'action_taken' => 'updated'
                 );
             } else {
@@ -226,9 +229,11 @@ class Iat_Bulk_Action
                 continue;
             }
 
-            // Extract filename without extension (no cleaning, keep as is)
+            // Extract filename, then clean it into readable alt text
+            // (strips -scaled, dimension suffixes, separators, etc.).
             $filename = basename($url);
-            $filename_without_ext = pathinfo($filename, PATHINFO_FILENAME);
+            $raw_filename_without_ext = pathinfo($filename, PATHINFO_FILENAME);
+            $filename_without_ext = iat_clean_filename_for_alt($raw_filename_without_ext);
 
             // Check if filename is meaningful
             if (empty($filename_without_ext) || strlen($filename_without_ext) < 3) {

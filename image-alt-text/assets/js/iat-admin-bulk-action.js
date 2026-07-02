@@ -14,7 +14,7 @@
         // Initialize Select2 for bulk action dropdown AFTER disabling
         $('#iat-bulk-action-select').select2({
             width: '100%',
-            placeholder: 'Choose action...',
+            placeholder: iatObj.i18n.chooseAction,
             allowClear: true,
             minimumResultsForSearch: Infinity
         });
@@ -60,11 +60,11 @@
             if (isProcessing) return;
             var actionType = $('#iat-bulk-action-select').val();
             if (!actionType) {
-                showStatusMessage('error', 'Please select an action first.');
+                showStatusMessage('error', iatObj.i18n.selectActionFirst);
                 return;
             }
             if (selectedItems.length === 0) {
-                showStatusMessage('error', 'Please select at least one image to process.');
+                showStatusMessage('error', iatObj.i18n.selectAtLeastOne);
                 return;
             }
             // SweetAlert confirmation
@@ -78,23 +78,26 @@
             }
             ensureSweetAlert(function () {
                 var actionNames = {
-                    'copy_title': 'Copy Title to Alt Text',
-                    'copy_filename': 'Copy Filename to Alt Text'
+                    'copy_title': iatObj.i18n.actionCopyTitle,
+                    'copy_filename': iatObj.i18n.actionCopyFilename
                 };
                 var noticeMessages = {
                     'copy_title': [
-                        { type: 'warning', icon: '<i class="fas fa-exclamation-triangle"></i>', text: 'Images without a title will be skipped.' },
-                        { type: 'info', icon: '<i class="fas fa-info-circle"></i>', text: 'Images where the alt text already matches the title will be skipped.' }
+                        { type: 'warning', icon: '<i class="fas fa-exclamation-triangle"></i>', text: iatObj.i18n.noticeNoTitleSkip },
+                        { type: 'info', icon: '<i class="fas fa-info-circle"></i>', text: iatObj.i18n.noticeTitleSameSkip }
                     ],
                     'copy_filename': [
-                        { type: 'warning', icon: '<i class="fas fa-exclamation-triangle"></i>', text: 'Images where the URL is not found will be skipped.' },
-                        { type: 'info', icon: '<i class="fas fa-info-circle"></i>', text: 'Images where the alt text already matches the filename will be skipped.' }
+                        { type: 'warning', icon: '<i class="fas fa-exclamation-triangle"></i>', text: iatObj.i18n.noticeNoUrlSkip },
+                        { type: 'info', icon: '<i class="fas fa-info-circle"></i>', text: iatObj.i18n.noticeFileSameSkip }
                     ]
                 };
+                var actionLabel = iatObj.i18n.confirmBulkFor
+                    .replace('%1$s', actionNames[actionType])
+                    .replace('%2$d', selectedItems.length);
                 var html = '<div class="iat-swal-content">' +
                     '<div class="iat-swal-action-title">' +
                     '<span class="dashicons dashicons-admin-tools"></span>' +
-                    '<span>' + actionNames[actionType] + ' for ' + selectedItems.length + ' image(s)</span>' +
+                    '<span>' + actionLabel + '</span>' +
                     '</div>' +
                     '<div class="iat-swal-notices">';
                 noticeMessages[actionType].forEach(function (msg) {
@@ -106,14 +109,14 @@
                 });
                 html += '</div></div>';
                 Swal.fire({
-                    title: 'Confirm Bulk Action',
+                    title: iatObj.i18n.confirmBulkTitle,
                     html: html,
                     icon: 'question',
                     showCancelButton: true,
                     confirmButtonColor: '#764ba2',
                     cancelButtonColor: '#6b7280',
-                    confirmButtonText: '<span>Yes, process it!</span>',
-                    cancelButtonText: '<span>Cancel</span>',
+                    confirmButtonText: '<span>' + iatObj.i18n.confirmYes + '</span>',
+                    cancelButtonText: '<span>' + iatObj.i18n.cancel + '</span>',
                     customClass: {
                         popup: 'iat-swal-popup',
                         confirmButton: 'iat-swal-confirm',
@@ -183,14 +186,14 @@
                             $('.iat-datatable').DataTable().ajax.reload();
                         }
                     } else {
-                        handleProcessingError(response.data.message || 'Processing failed');
+                        handleProcessingError(response.data.message || iatObj.i18n.processingFailed);
                     }
                     updateUI();
                 },
                 error: function (xhr, status, error) {
                     isProcessing = false;
                     hideProcessingStatus();
-                    handleProcessingError('Network error - please try again');
+                    handleProcessingError(iatObj.i18n.networkError);
                     updateUI();
                 }
             });
@@ -207,19 +210,19 @@
 
             // Always show button loader for all actions
             $('#iat-bulk-action-process-btn .iat-bulk-action-btn-loader').show();
-            $('#iat-bulk-action-process-btn .iat-bulk-action-btn-text').text('Processing...');
+            $('#iat-bulk-action-process-btn .iat-bulk-action-btn-text').text(iatObj.i18n.processing);
             $('#iat-bulk-action-process-btn').addClass('processing').prop('disabled', true);
         }
         function hideProcessingStatus() {
             $('#iat-bulk-action-process-btn .iat-bulk-action-btn-loader').hide();
-            $('#iat-bulk-action-process-btn .iat-bulk-action-btn-text').text('Process');
+            $('#iat-bulk-action-process-btn .iat-bulk-action-btn-text').text(iatObj.i18n.process);
             $('#iat-bulk-action-process-btn').removeClass('processing');
         }
         function handleProcessingSuccess(data) {
             $('.iat-bulk-action-status-area').empty();
             var msg = '<div class="iat-bulk-action-status-msg success">' +
                 '<i class="fas fa-check-circle"></i> '
-                + '<span>Bulk action completed successfully!</span>' +
+                + '<span>' + iatObj.i18n.bulkSuccess + '</span>' +
                 '</div>';
             $('.iat-bulk-action-status-area').append(msg);
             if (typeof $('.iat-datatable').DataTable === 'function') {
@@ -237,7 +240,7 @@
             $('.iat-bulk-action-status-area').empty();
             var msg = '<div class="iat-bulk-action-status-msg error">' +
                 '<i class="fas fa-times-circle"></i> '
-                + '<span>Error: ' + message + '</span>' +
+                + '<span>' + iatObj.i18n.bulkError.replace('%s', message) + '</span>' +
                 '</div>';
             $('.iat-bulk-action-status-area').append(msg);
             setTimeout(function () {
