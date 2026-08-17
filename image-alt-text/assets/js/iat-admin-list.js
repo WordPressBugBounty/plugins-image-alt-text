@@ -57,9 +57,9 @@
                 { data: 'checkbox', orderable: false, width: '2%' },
                 { data: 'image', orderable: false, width: '5%' },
                 { data: 'title', width: '15%' },
-                { data: 'url', width: '20%' },
+                { data: 'url', orderable: false, width: '20%' },
                 { data: 'alt_text', orderable: false, width: '30%' },
-                { data: 'size', width: '5%' },
+                { data: 'size', orderable: false, width: '5%' },
                 { data: 'date', width: '10%' },
                 { data: 'action', orderable: false, width: '2%' }
             ];
@@ -68,9 +68,9 @@
                 { data: 'checkbox', orderable: false, width: '5%' },
                 { data: 'image', orderable: false, width: '5%' },
                 { data: 'title', width: '20%' },
-                { data: 'url', width: '20%' },
+                { data: 'url', orderable: false, width: '20%' },
                 { data: 'alt_text', orderable: false, width: '30%' },
-                { data: 'size', width: '5%' },
+                { data: 'size', orderable: false, width: '5%' },
                 { data: 'date', width: '10%' },
                 { data: 'action', orderable: false, width: '' }
             ];
@@ -81,11 +81,13 @@
             processing: true,
             serverSide: true,
             pageLength: 10,
-            ordering: false,
+            ordering: true,
+            order: [[6, 'desc']],
             searching: true,
             lengthChange: true,
             responsive: true,
             stateSave: true,
+            stateDuration: 60 * 60 * 24,
             language: {
                 search: iatObj.i18n.dtSearch,
                 lengthMenu: iatObj.i18n.dtLengthMenu,

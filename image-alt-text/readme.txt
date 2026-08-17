@@ -6,8 +6,8 @@ Contributors: rswebstudios, lakharadk, pruthak911
 Tags: alt text, image alt text, ai alt text, bulk alt text, image seo
 Requires at least: 5.3
 Requires PHP: 7.4
-Tested up to: 7.0.0
-Stable tag: 4.1.0
+Tested up to: 7.0.4
+Stable tag: 4.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -167,6 +167,9 @@ Please use the official WordPress.org support forum for this plugin. Posting the
 * MySQL 5.6 or greater is recommended
 
 == Changelog ==
+
+= 4.1.1 =
+* Fix - Sorting the image list by Title or Date now works when you click the column heading.
 
 = 4.1.0 =
 * Feature - New alt text coverage dashboard at the top of both image tabs: see at a glance what percentage of your images have alt text, with a colour-coded progress bar and with / missing / total counts.

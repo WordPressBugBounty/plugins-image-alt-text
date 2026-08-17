@@ -34,6 +34,32 @@ class Iat_List
         $draw = isset($_POST['draw']) ? absint($_POST['draw']) : 0;
         $search_value = isset($_POST['search']['value']) ? sanitize_text_field(wp_unslash($_POST['search']['value'])) : '';
 
+        // Sorting: map the requested DataTables column to a safe WP_Query orderby.
+        // Only columns in this allowlist can be sorted; anything else falls back to date.
+        $sortable_columns = array(
+            'title' => 'title',
+            'date'  => 'date',
+        );
+
+        $orderby = 'date';
+        $order   = 'DESC';
+
+        if (isset($_POST['order'][0]['column']) && is_scalar($_POST['order'][0]['column'])) {
+            $order_column_index = absint($_POST['order'][0]['column']);
+            $requested_column   = isset($_POST['columns'][$order_column_index]['data']) && is_scalar($_POST['columns'][$order_column_index]['data'])
+                ? sanitize_key(wp_unslash($_POST['columns'][$order_column_index]['data']))
+                : '';
+
+            if (isset($sortable_columns[$requested_column])) {
+                $orderby = $sortable_columns[$requested_column];
+
+                $requested_dir = isset($_POST['order'][0]['dir']) && is_scalar($_POST['order'][0]['dir'])
+                    ? strtoupper(sanitize_text_field(wp_unslash($_POST['order'][0]['dir'])))
+                    : '';
+                $order = ($requested_dir === 'ASC') ? 'ASC' : 'DESC';
+            }
+        }
+
         if ($type === 'iat-with-alt-text') {
             $meta_query = array(
                 array(
@@ -67,8 +93,8 @@ class Iat_List
             'offset'         => $start,
             'meta_query'     => $meta_query,
             's'              => $search_value,
-            'orderby'        => 'date',
-            'order'          => 'DESC',
+            'orderby'        => $orderby,
+            'order'          => $order,
         );
 
         $posts = get_posts($query_args);
